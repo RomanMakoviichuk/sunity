@@ -1,0 +1,30 @@
+<svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="93" height="93" rx="10" fill="url(#paint0_linear_419_561)"/>
+<mask id="mask0_419_561" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="93" height="93">
+<rect width="93" height="93" rx="10" fill="#E0EBF0"/>
+</mask>
+<g mask="url(#mask0_419_561)">
+<path d="M46 26L65.4856 34.2272L74.9785 38.2354L84.4715 42.2435L136 64V93H-44V64L46 26Z" fill="#FFD51C"/>
+<rect x="13" y="61" width="24" height="24" rx="3" fill="white"/>
+<mask id="mask1_419_561" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="13" y="61" width="24" height="24">
+<rect x="13" y="61" width="24" height="24" rx="3" fill="white"/>
+</mask>
+<g mask="url(#mask1_419_561)">
+<ellipse cx="25.5455" cy="85.6818" rx="10.3636" ry="9.27273" fill="#1C1C1C"/>
+</g>
+<rect x="52" y="61" width="24" height="24" rx="3" fill="white"/>
+<mask id="mask2_419_561" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="52" y="61" width="24" height="24">
+<rect x="52" y="61" width="24" height="24" rx="3" fill="white"/>
+</mask>
+<g mask="url(#mask2_419_561)">
+<ellipse cx="64.5455" cy="85.6818" rx="10.3636" ry="9.27273" fill="#1C1C1C"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_419_561" x1="46.5" y1="0" x2="46.5" y2="93" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F0E8E0"/>
+<stop offset="0.39416" stop-color="#FBDA53" stop-opacity="0.27"/>
+<stop offset="1" stop-color="#FFD51C" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

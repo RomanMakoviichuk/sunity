@@ -1,0 +1,122 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-sun:before {
+	content: "\e90b";
+}
+
+._icon-arrow:before {
+	content: "\e90c";
+}
+
+._icon-arrow-r:before {
+	content: "\e90d";
+}
+
+._icon-marker:before {
+	content: "\e90e";
+}
+
+._icon-plug1:before {
+	content: "\e90f";
+}
+
+._icon-star:before {
+	content: "\e910";
+}
+
+._icon-tick:before {
+	content: "\e911";
+}
+
+._icon-illu:before {
+	content: "\e912";
+}
+
+._icon-arrow-black:before {
+	content: "\e913";
+}
+
+._icon-stars:before {
+	content: "\e914";
+}
+
+._icon-x:before {
+	content: "\e915";
+}
+
+._icon-phone:before {
+	content: "\e916";
+}
+
+._icon-mail:before {
+	content: "\e917";
+}
+
+._icon-calendar:before {
+	content: "\e918";
+}
+
+._icon-charge-big:before {
+	content: "\e902";
+	margin-left: -1.017578125em;
+	color: rgb(255, 213, 28);
+}
+
+._icon-charge:before {
+	content: "\e903";
+	color: #9d9d9d;
+}
+
+._icon-solar:before {
+	content: "\e908";
+	color: #ffd51c;
+}
+
+._icon-security:before {
+	content: "\e90a";
+}
+
+._icon-cloud:before {
+	content: "\e900";
+	color: #fff;
+}
+
+._icon-stopwatch:before {
+	content: "\e904";
+}
+
+._icon-plant:before {
+	content: "\e905";
+}
+
+._icon-delivery:before {
+	content: "\e906";
+}
+
+._icon-alma:before {
+	content: "\e907";
+}
+
+._icon-watch:before {
+	content: "\e909";
+}
+
+._icon-info:before {
+	content: "\e919";
+}
