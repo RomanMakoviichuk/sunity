@@ -5,229 +5,223 @@
 //Burger
 
 .icon-menu {
-	display: none;
+   display: none;
 
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(12);
-		height: rem(9);
-		z-index: 5;
+   @media (max-width: $mobile) {
+      display: block;
+      position: relative;
+      width: rem(12);
+      height: rem(9);
+      z-index: 5;
 
-		@media (any-hover: none) {
-			cursor: default;
-		}
+      @media (any-hover: none) {
+         cursor: default;
+      }
 
+      &::before,
+      &::after {
+         content: "";
+         transition: all 0.3s ease 0s;
+         right: 0;
+         position: absolute;
+         width: 100%;
+         height: rem(2);
+         background-color: #000;
+      }
 
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
+      &::before {
+         top: 0;
+      }
 
-		&::before {
-			top: 0;
-		}
+      &::after {
+         bottom: 0;
+      }
 
-		&::after {
-			bottom: 0;
-		}
+      span {
+         top: calc(50% - rem(1));
+      }
 
-		span {
-			top: calc(50% - rem(1));
-		}
+      .menu-open & {
+         span {
+            width: 0;
+         }
 
-		.menu-open & {
-			span {
-				width: 0;
-			}
+         &::before,
+         &::after {
+         }
 
-			&::before,
-			&::after {}
+         &::before {
+            top: calc(50% - rem(1));
+            transform: rotate(-45deg);
+         }
 
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+         &::after {
+            bottom: calc(50% - rem(1));
+            transform: rotate(45deg);
+         }
+      }
+   }
 }
 
 .button__wrapper {
-	@media (max-width:$mobile) {
-		background-color: #FBF3EA;
-		padding: rem(7.5) rem(6);
-	}
+   @media (max-width: $mobile) {
+      background-color: #fbf3ea;
+      padding: rem(7.5) rem(6);
+   }
 }
 
+.header_v2 {
+   @include adaptiveValue("height", 90, 60);
 
-.header {
-	@include adaptiveValue("height", 90, 60);
+   &__container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("gap", 50, 20);
 
-	&__container {
-		height: 100%;
-		display: flex;
-		align-items: center;
-		@include adaptiveValue("gap", 50, 20);
+      @media (max-width: $mobile) {
+         display: flex;
+         position: fixed;
+         z-index: 2;
+         width: 100%;
+         justify-content: space-between;
+         background-color: #fff;
+         height: rem(55);
 
-		@media (max-width:$mobile) {
-			display: flex;
-			position: fixed;
-			z-index: 2;
-			width: 100%;
-			justify-content: space-between;
-			background-color: #fff;
-			height: rem(55);
+         .header_v2__logo {
+            order: 2;
+         }
 
-			.header__logo {
-				order: 2;
-			}
+         .icon-menu {
+            order: 1;
+         }
 
-			.icon-menu {
-				order: 1;
-			}
+         .header_v2__basket {
+            order: 3;
+         }
+      }
+   }
 
-			.header__basket {
-				order: 3;
-			}
-		}
-	}
+   &__logo {
+      display: flex;
+      @include adaptiveValue("gap", 18, 10);
 
-	&__logo {
+      img {
+         @include adaptiveValue("width", 47, 37);
+      }
 
-		display: flex;
-		@include adaptiveValue("gap", 18, 10);
+      span {
+         @include adaptiveValue("font-size", 35, 25);
+         font-weight: 800;
+         line-height: rem(27.4);
+      }
+   }
 
-		img {
-			@include adaptiveValue("width", 47, 37);
-		}
+   &__basket {
+      display: none;
 
-		span {
-			@include adaptiveValue("font-size", 35, 25);
-			font-weight: 800;
-			line-height: rem(27.4);
-		}
-	}
-
-	&__basket {
-		display: none;
-
-		@media (max-width:$mobile) {
-			display: block;
-		}
-	}
+      @media (max-width: $mobile) {
+         display: block;
+      }
+   }
 }
 
 .menu {
-	display: flex;
-	align-items: center;
-	position: relative;
+   display: flex;
+   align-items: center;
+   position: relative;
 
+   &__body {
+      @media (max-width: $mobile) {
+         position: fixed;
+         width: 100%;
+         height: 100%;
+         left: 0;
+         top: rem(55);
+         overflow: auto;
+         background-color: #fbf3ea;
+         padding: rem(80) rem(15) rem(30) rem(15);
+         z-index: 3;
+         left: -100%;
+         transition: left 0.3s ease;
 
+         .menu-open & {
+            top: rem(55);
+            left: 0;
+         }
+      }
+   }
 
-	&__body {
-		@media (max-width:$mobile) {
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: rem(55);
-			overflow: auto;
-			background-color: #FBF3EA;
-			padding: rem(80) rem(15) rem(30) rem(15);
-			z-index: 3;
-			left: -100%;
-			transition: left 0.3s ease;
+   &__list {
+      display: flex;
+      @include adaptiveValue("gap", 50, 20);
 
-			.menu-open & {
-				top: rem(55);
-				left: 0;
-			}
-		}
-	}
+      > li:hover .sub-menu__list {
+         display: block;
+      }
 
-	&__list {
-		display: flex;
-		@include adaptiveValue("gap", 50, 20);
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         gap: rem(50) !important;
+         align-items: start;
+      }
+   }
 
-		>li:hover .sub-menu__list {
-			display: block;
-		}
+   &__item {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: rem(10);
 
-		@media (max-width:$mobile) {
-			flex-direction: column;
-			gap: rem(50) !important;
-			align-items: start;
-		}
+      @media (max-width: $mobile) {
+         font-size: rem(20);
+      }
+   }
 
-	}
+   &__link {
+      @include adaptiveValue("font-size", 16, 12);
 
-	&__item {
-		display: flex;
-		flex-direction: row-reverse;
-		gap: rem(10);
+      @media (max-width: $mobile) {
+         color: $mainColor;
+         @include adaptiveValue("font-size", 35, 30);
+         font-weight: 600;
+      }
+   }
 
-		@media (max-width:$mobile) {
-			font-size: rem(20);
-		}
-
-	}
-
-	&__link {
-		@include adaptiveValue("font-size", 16, 12);
-
-		@media (max-width:$mobile) {
-			color: $mainColor;
-			@include adaptiveValue("font-size", 35, 30);
-			font-weight: 600;
-		}
-	}
-
-	li {
-		position: relative;
-	}
-
-
+   li {
+      position: relative;
+   }
 }
 
-.icon-menu {}
+.icon-menu {
+}
 
 .sub-menu {
-	&__list {
-		display: none;
-		z-index: 5;
-		position: absolute;
-		background-color: #FBF3EA;
-		top: rem(19);
-		left: rem(-10);
-		padding: rem(10) rem(10);
-		width: rem(150);
-		border-radius: rem(12);
-		border: 1px solid $mainColor;
+   &__list {
+      display: none;
+      z-index: 5;
+      position: absolute;
+      background-color: #fbf3ea;
+      top: rem(19);
+      left: rem(-10);
+      padding: rem(10) rem(10);
+      width: rem(150);
+      border-radius: rem(12);
+      border: 1px solid $mainColor;
 
+      a {
+         font-size: rem(14);
+         display: flex;
+         gap: rem(5);
+         align-items: center;
+         padding-bottom: rem(8);
+      }
+   }
 
-		a {
-			font-size: rem(14);
-			display: flex;
-			gap: rem(5);
-			align-items: center;
-			padding-bottom: rem(8);
-		}
-	}
-
-	&__link {}
+   &__link {
+   }
 }
 
-@media (max-width:$tablet) {
-	.menu {}
+@media (max-width: $tablet) {
+   .menu {
+   }
 }
