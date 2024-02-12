@@ -88,6 +88,10 @@
 	}
 }
 
+.nav__switch::-webkit-scrollbar {
+	display: none;
+}
+
 .nav {
 
 	&__title {
@@ -133,6 +137,9 @@
 		justify-content: center;
 		padding: 0 rem(3);
 		overflow-x: auto;
+
+
+
 
 		@media (max-width: em(1328)) {
 			grid-row-start: 2;
