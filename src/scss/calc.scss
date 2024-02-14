@@ -150,6 +150,7 @@
       &_mode {
          flex-shrink: 0;
          text-wrap: nowrap;
+			text-align: center;
          @include adaptiveValue("font-size", 14, 13);
          padding: rem(18) rem(15);
          margin: rem(3) 0;

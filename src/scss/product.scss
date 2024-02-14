@@ -158,10 +158,10 @@
 .install {
    &__container {
       display: flex;
-      gap: rem(15);
-      margin-bottom: rem(16);
+      gap: 15px;
+      margin-bottom: 16px;
 
-      @media (max-width: $tablet) {
+      @media (max-width: 768px) {
          flex-direction: column-reverse;
          gap: 0;
          align-items: center;
@@ -171,24 +171,22 @@
    &__steps {
       display: flex;
       flex-direction: column;
-      background: $mainColor;
-      border-radius: rem(25);
+      background: #1c1c1c;
+      border-radius: 25px;
       color: #fff;
-      padding-right: rem(20);
-      @include adaptiveValue("padding-left", 70, 20);
-      @include adaptiveValue("padding-top", 66, 28);
-      @include adaptiveValue("padding-bottom", 83, 28);
-      gap: rem(46);
+      padding: 28px 20px 28px 70px; /* top right bottom left */
+      gap: 46px;
       width: 40%;
 
-      @media (max-width: $tablet) {
+      @media (max-width: 768px) {
          width: 100%;
-         border-radius: 0 0 rem(25) rem(25);
+         border-radius: 0 0 25px 25px;
+         padding-left: 20px;
       }
 
       &_title {
-         @include adaptiveValue("font-size", 60, 40);
-         color: $yellow;
+         font-size: 60px;
+         color: #ffd51c;
          font-weight: 700;
       }
 
@@ -198,85 +196,80 @@
 
       &_item {
          display: flex;
-         @include adaptiveValue("gap", 20, 16);
+         gap: 16px;
          text-align: left;
          align-items: top;
          width: 100%;
-      }
+         transition: all 0.3s ease;
 
-      &_item.active {
-         span {
-            display: inline-block;
-            margin-top: rem(24);
-            color: #a4a4a4;
+         &.active {
+            span {
+               display: inline-block;
+               margin-top: 24px;
+               color: #a4a4a4;
+            }
+            .svgloader {
+               visibility: visible;
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+            }
+            .item__animation {
+               background-color: #1c1c1c;
+            }
          }
       }
 
       &_image {
          width: 60%;
 
-         @media (max-width: $tablet) {
+         @media (max-width: 768px) {
             width: 100%;
          }
 
          img {
             width: 100%;
             height: 100%;
-            border-radius: rem(25);
+            border-radius: 25px;
 
-            @media (max-width: $tablet) {
-               border-radius: rem(25) rem(25) 0 0;
+            @media (max-width: 768px) {
+               border-radius: 25px 25px 0 0;
             }
          }
       }
    }
 }
 
-.item {
-   &__animation {
-      min-width: rem(40);
-      height: rem(40);
-      border-radius: 50%;
-      background: #9b9b9b;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: rem(20);
-      color: $mainColor;
-      font-weight: 900;
-      position: relative;
-   }
+.svgloader {
+   visibility: hidden;
+}
 
-   &__animation::before {
-      content: "";
-      width: rem(40);
-      height: rem(40);
-      top: 50%;
-      left: 50%;
-      position: absolute;
-      transform: translate(-50%, -50%);
-   }
+.item__animation {
+   padding: 20px;
+   min-width: 20px;
+   max-width: 20px;
+   height: 19px;
+   border-radius: 50%;
+   background: #9b9b9b;
+   font-size: 20px;
+   color: #1c1c1c;
+   font-weight: 900;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 
-   &__content {
-      padding-top: rem(10);
+.item__content {
+   padding-top: 10px;
 
-      span {
-         display: none;
-      }
+   span {
+      display: none;
    }
 }
 
-// @keyframes rotate {
-// 	0% {
-// 		transform: rotate(0deg);
-// 	}
-
-// 	100% {
-// 		transform: rotate(360deg);
-// 	}
-// }
-
-// @keyframes animate {}
 
 //========================================================================================================================================================
 .aspects {

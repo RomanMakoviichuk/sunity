@@ -273,5 +273,44 @@ if (eye) {
 	});
 }
 
+//========================================================================================================================================================
+//product circle loading animation
 
+var svgCircleProgressPaths = document.querySelectorAll("[id^=svgCircleProgressPath]");
+var installStepsItems = document.querySelectorAll(".install__steps_item");
+var duration = 5000; // Длительность анимации в миллисекундах
+var lengths = []; // Массив длин окружностей
 
+svgCircleProgressPaths.forEach(function(path, index) {
+    var length = path.getTotalLength();
+    lengths.push(length);
+    path.style.strokeDasharray = length; // Устанавливаем длину окружности как начальное значение
+});
+
+var currentIndex = 0; // Индекс текущего активного элемента
+
+function animateCircle(duration) {
+    var start = null;
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        var progress = timestamp - start;
+        svgCircleProgressPaths[currentIndex].style.strokeDashoffset = lengths[currentIndex] - progress / duration * lengths[currentIndex];
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        } else {
+            // По достижении 100% анимации переключаем класс active на следующий элемент
+            installStepsItems[currentIndex].classList.remove("active");
+            currentIndex++;
+            if (currentIndex >= installStepsItems.length) {
+                currentIndex = 0; // Если достигнут последний элемент, переключаемся на первый
+            }
+            svgCircleProgressPaths[currentIndex].style.strokeDashoffset = lengths[currentIndex]; // Сбрасываем состояние круга перед анимацией следующего элемента
+            installStepsItems[currentIndex].classList.add("active");
+            // Запускаем анимацию заново для текущего элемента
+            animateCircle(duration);
+        }
+    }
+    window.requestAnimationFrame(step);
+}
+
+animateCircle(duration);
