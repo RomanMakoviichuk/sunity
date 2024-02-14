@@ -316,3 +316,196 @@ function initProductCircleLoading() {
    animateCircle(duration);
 }
 initProductCircleLoading();
+
+function parallaxAnimation() {
+   const block1 = document.querySelector(".parallax__item._1");
+   const block2 = document.querySelector(".parallax__item._2");
+   const block3 = document.querySelector(".parallax__item._3");
+   const block4 = document.querySelector(".parallax__item._4");
+   const block5 = document.querySelector(".parallax__item._5");
+   const block6 = document.querySelector(".parallax__item._6");
+   const block7 = document.querySelector(".parallax__item._7");
+   const block8 = document.querySelector(".parallax__item._8");
+   const block9 = document.querySelector(".parallax__item._9");
+   const block10 = document.querySelector(".parallax__item._10");
+
+   // prevent animation on other pages
+   if (block1.length === 0) return;
+
+   let transformValues = {
+      block1: { t1: 200, t2: 200, main: 200 },
+      block2: { t1: 180, t2: 140, main: 180 },
+      block3: { t1: 160, t2: 0, main: 160 },
+      block4: { t1: 80, t2: -80, main: 80 },
+      block5: { t1: 120, t2: -120, main: 120 },
+      block6: { t1: 0, t2: -150, main: 150 },
+      block7: { t1: -120, t2: -120, main: 120 },
+      block8: { t1: -160, t2: 0, main: 160 },
+      block9: { t1: -170, t2: 170, main: 170 },
+      block10: { t1: -190, t2: 190, main: 190 },
+   };
+   if (window.innerWidth < 768) {
+      transformValues = {
+         block1: { t1: 100, t2: 100, main: 100 },
+         block2: { t1: 90, t2: 70, main: 90 },
+         block3: { t1: 80, t2: 0, main: 80 },
+         block4: { t1: 40, t2: -40, main: 40 },
+         block5: { t1: 60, t2: -60, main: 60 },
+         block6: { t1: 0, t2: -75, main: 75 },
+         block7: { t1: -60, t2: -60, main: 60 },
+         block8: { t1: -80, t2: 0, main: 80 },
+         block9: { t1: -85, t2: 85, main: 85 },
+         block10: { t1: -95, t2: 95, main: 95 },
+      };
+   }
+
+   const blocks = [block1, block2, block3, block4, block5, block6, block7, block8, block9, block10];
+
+   blocks.forEach((block, index) => {
+      const { t1, t2 } = transformValues[`block${index + 1}`];
+      setTransform(block, `translate(${t1}px, ${t2}px)`);
+   });
+
+   const container1 = document.querySelector(".testimonial__parallax");
+   const container2 = document.querySelector(".parallax__body");
+   const containerOriginal = container1.getBoundingClientRect();
+   const contentContainer = container2.getBoundingClientRect();
+
+   window.addEventListener("scroll", handleScroll);
+
+   function handleScroll() {
+      const { top } = container1.getBoundingClientRect();
+      if (top > 0) {
+         blocks.forEach((block, index) => {
+            const { t1, t2 } = transformValues[`block${index + 1}`];
+            setTransform(block, `translate(${t1}px, ${t2}px)`);
+         });
+
+         setOpacityToNodes("0%");
+      }
+
+      if (top < 0 && top > -containerOriginal.height + contentContainer.height) {
+         const animateValue = -(top * 0.8);
+
+         const onePercent = (contentContainer.height * 0.25) / 100;
+         const opacity = animateValue / onePercent;
+
+         blocks.forEach((block, index) => {
+            animateBlocks(`block${index + 1}`, animateValue);
+         });
+
+         if (opacity >= 100) {
+            setOpacityToNodes("100%");
+         }
+
+         setOpacityToNodes(`${opacity}%`);
+      }
+      if (top < -contentContainer.height) {
+         blocks.forEach((block) => {
+            setTransform(block, `translate(0px, 0px)`);
+         });
+         setOpacityToNodes("100%");
+         return;
+      }
+   }
+   function animateBlocks(el, animateValue) {
+      switch (el) {
+         case "block1":
+            let position = transformValues.block1.main - animateValue;
+            if (position <= 0) {
+               setTransform(block1, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block1, `translate(${position}px, ${position}px)`);
+            break;
+         case "block2":
+            let position_2 = transformValues.block2.main - animateValue;
+            if (position_2 <= 0) {
+               setTransform(block2, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block2, `translate(${position_2}px, ${position_2 * 0.7}px)`);
+            break;
+         case "block3":
+            let position_3 = transformValues.block3.main - animateValue;
+            if (position_3 <= 0) {
+               setTransform(block3, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block3, `translate(${position_3}px, 0px)`);
+            break;
+         case "block4":
+            let position_4 = transformValues.block4.main - animateValue;
+            if (position_4 <= 0) {
+               setTransform(block4, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block4, `translate(${position_4}px, -${position_4}px)`);
+            break;
+         case "block5":
+            let position_5 = transformValues.block5.main - animateValue;
+            if (position_5 <= 0) {
+               setTransform(block5, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block5, `translate(${position_5}px, -${position_5}px)`);
+            break;
+         case "block6":
+            let position_6 = transformValues.block6.main - animateValue;
+            if (position_6 <= 0) {
+               setTransform(block6, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block6, `translate(0px, -${position_6}px)`);
+            break;
+         case "block7":
+            let position_7 = transformValues.block7.main - animateValue;
+            if (position_7 <= 0) {
+               setTransform(block7, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block7, `translate(-${position_7}px, -${position_7}px)`);
+            break;
+         case "block8":
+            let position_8 = transformValues.block8.main - animateValue;
+            if (position_8 <= 0) {
+               setTransform(block8, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block8, `translate(-${position_8}px, 0px)`);
+            break;
+         case "block9":
+            let position_9 = transformValues.block9.main - animateValue;
+            if (position_9 <= 0) {
+               setTransform(block9, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block9, `translate(-${position_9}px, ${position_9}px)`);
+            break;
+         case "block10":
+            let position_10 = transformValues.block10.main - animateValue;
+            if (position_10 <= 0) {
+               setTransform(block10, `translate(0px, 0px)`);
+               return;
+            }
+            setTransform(block10, `translate(-${position_10}px, ${position_10}px)`);
+            break;
+         default:
+            break;
+      }
+   }
+}
+parallaxAnimation();
+
+function setOpacityToNodes(opacity, nodesName = ".parallax__item") {
+   const nodes = document.querySelectorAll(nodesName);
+   nodes.forEach((node) => {
+      node.style.opacity = opacity;
+   });
+}
+
+function setTransform(el, transform) {
+   el.style.transform = transform;
+   el.style.WebkitTransform = transform;
+   el.style["will-change"] = transform;
+}
