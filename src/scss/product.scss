@@ -109,7 +109,6 @@
          width: 100%;
       }
    }
-
    .services__item-title {
       padding-bottom: rem(5);
       font-size: rem(15);
@@ -270,502 +269,499 @@
    }
 }
 
-
 //========================================================================================================================================================
 .aspects {
-	margin-top: rem(20);
+   margin-top: rem(20);
 
-	&__container {
-		display: flex;
-		flex-wrap: wrap;
-		gap: rem(20);
-	}
+   &__container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(20);
+   }
 
-	&__block {
-		flex: 1;
-		@include adaptiveValue("padding-left", 37, 20);
-		@include adaptiveValue("padding-top", 36, 20);
-		@include adaptiveValue("padding-right", 37, 20);
-		@include adaptiveValue("padding-bottom", 36, 20);
-		border-radius: 25px;
-		min-width: rem(470);
-		min-height: rem(520);
-		@media (max-width:$tablet){
-			min-width: 100%;
-		}
+   &__block {
+      flex: 1;
+      @include adaptiveValue("padding-left", 37, 20);
+      @include adaptiveValue("padding-top", 36, 20);
+      @include adaptiveValue("padding-right", 37, 20);
+      @include adaptiveValue("padding-bottom", 36, 20);
+      border-radius: 25px;
+      min-width: rem(470);
+      min-height: rem(520);
+      @media (max-width: $tablet) {
+         min-width: 100%;
+      }
 
-		ul {
-			display: flex;
-			flex-direction: column;
-			gap: rem(16);
-			@include adaptiveValue("margin-bottom", 156, 58);
-		}
+      ul {
+         display: flex;
+         flex-direction: column;
+         gap: rem(16);
+         @include adaptiveValue("margin-bottom", 156, 58);
+      }
 
-		li {
-			display: flex;
-			align-items: center;
-			gap: rem(15);
-			font-size: rem(15);
-			font-weight: 600;
+      li {
+         display: flex;
+         align-items: center;
+         gap: rem(15);
+         font-size: rem(15);
+         font-weight: 600;
 
-			p {
-				color: #818181;
-			}
+         p {
+            color: #818181;
+         }
 
-			._icon-tick {
-				background-color: $yellow;
-			}
+         ._icon-tick {
+            background-color: $yellow;
+         }
 
-			span {
-				color: $mainColor;
-			}
-		}
-	}
+         span {
+            color: $mainColor;
+         }
+      }
+   }
 
-	&__block-1 {
-		overflow: hidden;
-		background: #F0E8E0;
-		display: flex;
-		flex-direction: column;
-		position: relative;
-		::after{
-			content: "";
-			width: 100%;
-			height: 100%;
-			background: url(../img/product/aspects/block1.png);
-			background-repeat: no-repeat;
-			background-position: bottom right;
-			background-size: 50%;
-			position: absolute;
-			top: 0;
-			left: 0;
+   &__block-1 {
+      overflow: hidden;
+      background: #f0e8e0;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      ::after {
+         content: "";
+         width: 100%;
+         height: 100%;
+         background: url(../img/product/aspects/block1.png);
+         background-repeat: no-repeat;
+         background-position: bottom right;
+         background-size: 50%;
+         position: absolute;
+         top: 0;
+         left: 0;
 
-			@media (max-width: em(425)){
-				  background-size: 80%;
-			}
-		}
+         @media (max-width: em(425)) {
+            background-size: 80%;
+         }
+      }
 
-		.block__title {
-			display: flex;
-			align-items: center;
-			align-self: center;
-			padding-bottom: rem(39);
+      .block__title {
+         display: flex;
+         align-items: center;
+         align-self: center;
+         padding-bottom: rem(39);
 
-			._icon-charge-big {
-				text-shadow: $mainColor 2px 3px;
-			}
+         ._icon-charge-big {
+            text-shadow: $mainColor 2px 3px;
+         }
 
-			@media (max-width:$tablet) {
-				flex-direction: column;
-				gap: rem(26);
-			}
-		}
+         @media (max-width: $tablet) {
+            flex-direction: column;
+            gap: rem(26);
+         }
+      }
 
-		@media (max-width:$tablet) {
-			min-width: 100%;
-			height: rem(754);
-		}
+      @media (max-width: $tablet) {
+         min-width: 100%;
+         height: rem(754);
+      }
 
-		@media (max-width: em(565)) {
-			background-size: 100%;
-		}
-	}
+      @media (max-width: em(565)) {
+         background-size: 100%;
+      }
+   }
 
-	&__block-2 {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		color: #fff;
-		position: relative;
-		overflow: hidden;
-		::after {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background: url(../img/product/aspects/block2.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-			top: 0;
-			left: 0;
-			z-index: -1;
-		}
+   &__block-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      ::after {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background: url(../img/product/aspects/block2.png);
+         background-repeat: no-repeat;
+         background-size: cover;
+         top: 0;
+         left: 0;
+         z-index: -1;
+      }
 
-		._icon-cloud {
-			font-size: rem(58);
-			margin-bottom: rem(34);
-		}
+      ._icon-cloud {
+         font-size: rem(58);
+         margin-bottom: rem(34);
+      }
 
-		span {
-			color: $yellow;
-		}
-	}
+      span {
+         color: $yellow;
+      }
+   }
 
-	&__block-3 {
-		background-color: #1c1c1c;
-		color: #fff;
-		display: flex;
-		flex-direction: column;
-		justify-content: end;
-		gap: rem(10);
-		position: relative;
-			::after {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-image: url(../img/product/aspects/block3.png);
-			background-position: right top;
-			background-size: 60%;
-			background-repeat: no-repeat;
-			top: 0;
-			left: 0;
-			@media (max-width: em(580)){
-				background-size: 100%; 
-			}
-		}
+   &__block-3 {
+      background-color: #1c1c1c;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: rem(10);
+      position: relative;
+      ::after {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background-image: url(../img/product/aspects/block3.png);
+         background-position: right top;
+         background-size: 60%;
+         background-repeat: no-repeat;
+         top: 0;
+         left: 0;
+         @media (max-width: em(580)) {
+            background-size: 100%;
+         }
+      }
 
-		@media (max-width:$mobile) {
-			background-size: contain;
-		}
+      @media (max-width: $mobile) {
+         background-size: contain;
+      }
 
-		.block__title {
-			margin-bottom: rem(43);
-			width: rem(288);
-			font-size: rem(40);
-			width: 95%;
-		}
+      .block__title {
+         margin-bottom: rem(43);
+         width: rem(288);
+         font-size: rem(40);
+         width: 95%;
+      }
 
-		span {
-			color: $yellow;
-		}
+      span {
+         color: $yellow;
+      }
 
-		p {
-			font-size: rem(15);
-			font-weight: 600;
-		}
-	}
+      p {
+         font-size: rem(15);
+         font-weight: 600;
+      }
+   }
 
-	&__block-4 {
-		background-color: $yellow;
-		position: relative;
-		::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-image: url(../img/product/aspects/block4.png);
-			background-position: bottom center;
-			background-repeat: no-repeat;
-			@media (max-width: em(440)){
-			  background-size: 100%;
-			}
-		}
+   &__block-4 {
+      background-color: $yellow;
+      position: relative;
+      ::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url(../img/product/aspects/block4.png);
+         background-position: bottom center;
+         background-repeat: no-repeat;
+         @media (max-width: em(440)) {
+            background-size: 100%;
+         }
+      }
 
-		.block__title {
-			font-size: rem(40);
-		}
+      .block__title {
+         font-size: rem(40);
+      }
 
-		h4 {
-			color: rgba(28, 28, 28, 0.50);
-			font-size: rem(25);
-		}
+      h4 {
+         color: rgba(28, 28, 28, 0.5);
+         font-size: rem(25);
+      }
 
-		p {
-			font-style: rem(15);
-			font-weight: 400;
-			margin-top: rem(20);
-		}
-	}
+      p {
+         font-style: rem(15);
+         font-weight: 400;
+         margin-top: rem(20);
+      }
+   }
 
-	&__block-5 {
-		background-color: #fff;
-		color: $mainColor;
-		display: flex;
-		align-items: center;
-		@include adaptiveValue("gap", 156, 20);
-		@media (max-width:$tablet){
-			flex-direction: column-reverse;
-			justify-content: space-between;
-		}
-		.block__title {
-			@include adaptiveValue("font-size", 60, 30);
-			font-weight: 700;
-		}
+   &__block-5 {
+      background-color: #fff;
+      color: $mainColor;
+      display: flex;
+      align-items: center;
+      @include adaptiveValue("gap", 156, 20);
+      @media (max-width: $tablet) {
+         flex-direction: column-reverse;
+         justify-content: space-between;
+      }
+      .block__title {
+         @include adaptiveValue("font-size", 60, 30);
+         font-weight: 700;
+      }
 
-		img {
-			@media (max-width:$tablet){
-				width: 50%;
-			}
-			@media (max-width: em(340)){
-				  width: 100%;
-			}
-		}
+      img {
+         @media (max-width: $tablet) {
+            width: 50%;
+         }
+         @media (max-width: em(340)) {
+            width: 100%;
+         }
+      }
 
-		.block__content_text {
-			display: flex;
-			align-items: center;
-			@include adaptiveValue("gap", 57, 0);
+      .block__content_text {
+         display: flex;
+         align-items: center;
+         @include adaptiveValue("gap", 57, 0);
 
-			@media (max-width:$tablet) {
-				flex-direction: column;
-			}
+         @media (max-width: $tablet) {
+            flex-direction: column;
+         }
 
-			h2 {
-				color: $yellow;
-				@include adaptiveValue("font-size", 130, 80);
-				font-weight: 700;
-			}
+         h2 {
+            color: $yellow;
+            @include adaptiveValue("font-size", 130, 80);
+            font-weight: 700;
+         }
 
-			span {
-				@include adaptiveValue("font-size", 20, 15);
-				font-weight: 700;
-			}
+         span {
+            @include adaptiveValue("font-size", 20, 15);
+            font-weight: 700;
+         }
 
-			p {
-				@include adaptiveValue("font-size", 20, 15);
-				font-weight: 400;
-			}
-		}
-	}
-
+         p {
+            @include adaptiveValue("font-size", 20, 15);
+            font-weight: 400;
+         }
+      }
+   }
 }
 
 .block {
-	border-radius: rem(25);
-	&__title {
-		font-size: rem(30);
-		font-weight: 700;
-	}
+   border-radius: rem(25);
+   &__title {
+      font-size: rem(30);
+      font-weight: 700;
+   }
 
-	&__link {
-		display: flex;
-		align-items: center;
-		gap: rem(10);
-		font-weight: 700;
+   &__link {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+      font-weight: 700;
 
-		p {
-			text-decoration: underline;
-		}
-	}
+      p {
+         text-decoration: underline;
+      }
+   }
 }
-
 
 //========================================================================================================================================================
 
 .overview {
-	@include adaptiveValue("padding-top", 328, 229);
-	padding-bottom: rem(80);
+   @include adaptiveValue("padding-top", 328, 229);
+   padding-bottom: rem(80);
 
-	&__container {
-		display: flex;
-		flex-direction: column;
-	}
+   &__container {
+      display: flex;
+      flex-direction: column;
+   }
 
-	&__title {
-		@include adaptiveValue("font-size", 40, 20);
-		border-bottom: rem(11) solid $yellow;
-		text-align: center;
-		@include adaptiveValue("padding-bottom", 90, 60);
-		font-weight: 700;
-		._icon-illu {
-			color: $yellow;
-		}
-	}
+   &__title {
+      @include adaptiveValue("font-size", 40, 20);
+      border-bottom: rem(11) solid $yellow;
+      text-align: center;
+      @include adaptiveValue("padding-bottom", 90, 60);
+      font-weight: 700;
+      ._icon-illu {
+         color: $yellow;
+      }
+   }
 
-	&__items {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		@include adaptiveValue("gap", 79, 15);
-		justify-content: space-between;
-		@include adaptiveValue("margin-top", 90, 49);
-		@include adaptiveValue("margin-bottom", 151, 79);
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      @include adaptiveValue("gap", 79, 15);
+      justify-content: space-between;
+      @include adaptiveValue("margin-top", 90, 49);
+      @include adaptiveValue("margin-bottom", 151, 79);
 
-		&_item {
-			display: flex;
-			align-items: center;
-			gap: rem(10);
-			span {
-				color: #696969;
-				@include adaptiveValue("font-size", 13, 10);
-				font-weight: 500;
-			}
-			:first-child {
-				@include adaptiveValue("font-size", 35, 30);
-			}
-		}
-	}
-	&__btn {
-		display: flex;
-		align-self: center;
-	}
+      &_item {
+         display: flex;
+         align-items: center;
+         gap: rem(10);
+         span {
+            color: #696969;
+            @include adaptiveValue("font-size", 13, 10);
+            font-weight: 500;
+         }
+         :first-child {
+            @include adaptiveValue("font-size", 35, 30);
+         }
+      }
+   }
+   &__btn {
+      display: flex;
+      align-self: center;
+   }
 }
-
 
 //========================================================================================================================================================
 
 .showcase {
-	margin: 0 rem(15);
-	@include adaptiveValue("margin-top", 170, 210);
-	&__container {
-		display: flex;
-		flex-direction: column;
-		font-weight: 600;
-		@include adaptiveValue("height", 693, 530);
-		width: 100%;
-		color: #fff;
-		@include adaptiveValue("padding-top", 167, 87);
-		@include adaptiveValue("padding-left", 200, 30);
-		background-image: url(../img/product/showcase/background.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		border-radius: rem(25);
-	}
+   margin: 0 rem(15);
+   @include adaptiveValue("margin-top", 170, 210);
+   &__container {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      @include adaptiveValue("height", 693, 530);
+      width: 100%;
+      color: #fff;
+      @include adaptiveValue("padding-top", 167, 87);
+      @include adaptiveValue("padding-left", 200, 30);
+      background-image: url(../img/product/showcase/background.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: rem(25);
+   }
 
-	&__undertitle {
-		@include adaptiveValue("font-size", 20, 15);
-		
-	}
+   &__undertitle {
+      @include adaptiveValue("font-size", 20, 15);
+   }
 
-	&__title {
-		@include adaptiveValue("font-size", 40, 30);
-		@include adaptiveValue("padding-top", 21, 7);
-		@include adaptiveValue("padding-bottom", 50, 34);
-	}
+   &__title {
+      @include adaptiveValue("font-size", 40, 30);
+      @include adaptiveValue("padding-top", 21, 7);
+      @include adaptiveValue("padding-bottom", 50, 34);
+   }
 
-	&__btn {
-		padding: rem(15) rem(25);
-		background: rgba(255, 255, 255, 0.2);
-		backdrop-filter: blur(1px);
-		display: flex;
-		align-items: center;
-		gap: rem(15);	
-		width: rem(219);
-		height: rem(61);
-		border-radius: rem(10);
-		span {
-			font-size: rem(17);
-		}
-		._icon-play {
-			font-size: rem(31);
-			color: #fff;
-			position: relative;
-		}
-		._icon-play::after {
-			content: "";
-			position: absolute;
-			width: rem(55);
-			height: rem(55);
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			border-radius: 50%;
-			background: #FFF;
-			opacity: 0.2;
-			}
-	}
+   &__btn {
+      padding: rem(15) rem(25);
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(1px);
+      display: flex;
+      align-items: center;
+      gap: rem(15);
+      width: rem(219);
+      height: rem(61);
+      border-radius: rem(10);
+      span {
+         font-size: rem(17);
+      }
+      ._icon-play {
+         font-size: rem(31);
+         color: #fff;
+         position: relative;
+      }
+      ._icon-play::after {
+         content: "";
+         position: absolute;
+         width: rem(55);
+         height: rem(55);
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         border-radius: 50%;
+         background: #fff;
+         opacity: 0.2;
+      }
+   }
 }
 
 //========================================================================================================================================================
 
 .questionnaire {
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 8.51%, #FFF 54.35%, rgba(255, 255, 255, 0.00) 100%);
-	@include adaptiveValue("padding-top", 291, 169);
-	@include adaptiveValue("padding-bottom", 209, 245);
-	&__container {
-		display: flex;
-		gap: rem(77);
-		@media (max-width:$tablet){
-			flex-direction: column;
-		}
-		
-	}
+   background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #fff 8.51%,
+      #fff 54.35%,
+      rgba(255, 255, 255, 0) 100%
+   );
+   @include adaptiveValue("padding-top", 291, 169);
+   @include adaptiveValue("padding-bottom", 209, 245);
+   &__container {
+      display: flex;
+      gap: rem(77);
+      @media (max-width: $tablet) {
+         flex-direction: column;
+      }
+   }
 
-	&__image {
-		position: relative;
-		img {
-			width: 100%;
-			height: 100%;
-		}
-	}
-	&__image::after {
-		content: "AR";
-		color: #B4AEA8;
-		font-size: rem(45);
-		font-weight: 900;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+   &__image {
+      position: relative;
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+   &__image::after {
+      content: "AR";
+      color: #b4aea8;
+      font-size: rem(45);
+      font-weight: 900;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
 
-	&__content {
-		display: flex;
-		flex-direction: column;
+   &__content {
+      display: flex;
+      flex-direction: column;
 
-		&_title {
-			@include adaptiveValue("font-size", 60, 40);
-			font-weight: 600;
-			@include adaptiveValue("padding-bottom", 50, 33);
-		}
-		&_items {
-			border-radius: 25px;
-			background: #FBF3EA;
-			padding: 0 rem(26);
+      &_title {
+         @include adaptiveValue("font-size", 60, 40);
+         font-weight: 600;
+         @include adaptiveValue("padding-bottom", 50, 33);
+      }
+      &_items {
+         border-radius: 25px;
+         background: #fbf3ea;
+         padding: 0 rem(26);
+      }
+      &_item {
+         @include adaptiveValue("font-size", 15, 13);
+         padding: rem(25) 0;
+         border-bottom: 1px solid #c5c5c5;
+         cursor: pointer;
+         transition: 0.3s ease;
+         line-height: rem(20);
+         display: flex;
+         align-items: center;
 
-		}
-		&_item {
-			@include adaptiveValue("font-size", 15, 13);
-			padding: rem(25) 0;
-			border-bottom: 1px solid #C5C5C5;
-			cursor: pointer;
-			transition: 0.3s ease;
-			line-height: rem(20);
-			display: flex;
-			align-items: center;
+         ._icon-x {
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: rem(24);
+            font-size: rem(16);
+            color: #b4aea8;
+         }
+         p {
+            display: none;
+         }
+      }
+      &_item:last-child {
+         border-bottom: none;
+      }
 
-			._icon-x {
-				display: inline-block;
-				vertical-align: middle;
-				padding-right: rem(24);
-				font-size: rem(16);
-				color: #B4AEA8;
-			}
-			p {
-				display: none;
-			}
-		}
-		&_item:last-child {
-			border-bottom: none;
-	  }
-
-		&_links {
-			display: flex;
-			padding-top: rem(33);
-			justify-content: center;
-			text-decoration: underline;
-			@include adaptiveValue("gap", 78, 40);
-			:first-child {
-				._icon-arrow-r {
-					transform: rotate(90deg) translate(-25%);
-
-				}
-			}
-			._icon-arrow-r {
-				display: inline-block;
-				vertical-align: middle;
-				padding-left: rem(14);
-			}
-			@media (max-width:$tablet){
-				flex-direction: column;
-			}
-		}
-	}
+      &_links {
+         display: flex;
+         padding-top: rem(33);
+         justify-content: center;
+         text-decoration: underline;
+         @include adaptiveValue("gap", 78, 40);
+         :first-child {
+            ._icon-arrow-r {
+               transform: rotate(90deg) translate(-25%);
+            }
+         }
+         ._icon-arrow-r {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: rem(14);
+         }
+         @media (max-width: $tablet) {
+            flex-direction: column;
+         }
+      }
+   }
 }
-

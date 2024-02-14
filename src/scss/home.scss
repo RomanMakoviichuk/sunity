@@ -384,9 +384,14 @@ body {
       display: flex;
       flex-direction: column;
       padding-top: rem(33);
-      background-image: url("https://cdn.shopify.com/s/files/1/0807/4900/3083/files/background1.png?v=1707773912");
-      background-repeat: no-repeat;
-      background-position: right bottom;
+      position: relative;
+
+      &__bg {
+         position: absolute;
+         right: 0;
+         bottom: 0;
+         max-width: 90%;
+      }
 
       @media (max-width: $tablet) {
          width: 100%;
@@ -422,10 +427,6 @@ body {
 .item-black {
    background-color: #1c1c1c;
    color: #fff;
-   background-image: url("https://cdn.shopify.com/s/files/1/0807/4900/3083/files/background2.png?v=1707773913");
-   background-size: 70%;
-   background-repeat: no-repeat;
-   background-position: right bottom;
 
    @media (max-width: $tablet) {
       background-size: contain;
@@ -583,18 +584,53 @@ body {
 
 //========================================================================================================================================================
 .testimonial__parallax {
-   min-width: 100vh;
+   min-width: 100vw;
+   position: relative;
 }
 
 .parallax {
-
    &__body {
       overflow: hidden;
-      background-image: url("https://cdn.shopify.com/s/files/1/0807/4900/3083/files/background.jpg?v=1707774657");
-      background-size: contain;
-      background-repeat: no-repeat;
+      // background-image: url("https://cdn.shopify.com/s/files/1/0807/4900/3083/files/background.jpg?v=1707774657");
+      // background-size: contain;
+      // background-repeat: no-repeat;
       position: relative;
-		width: 100%;
+      width: 100%;
+      &__bg {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         .item {
+            width: 477px;
+            height: 477px;
+            position: absolute;
+         }
+         .item1 {
+            left: 38vw;
+            top: 3vw;
+            background: #ffd51c;
+            border-radius: 9999px;
+         }
+         .item2 {
+            left: 7vw;
+            top: 16vh;
+            background: #ffe1b4;
+         }
+         .item3 {
+            left: 34vw;
+            top: 26vh;
+            background: #e0ffc8;
+         }
+         .item4 {
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            background: rgba(251, 243, 234, 0.2);
+            backdrop-filter: blur(100px);
+         }
+      }
    }
 
    &__container {
@@ -603,7 +639,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-		position: relative;
+      position: relative;
 
       // @media (max-width: $tablet) {
       //    height: rem(729);
