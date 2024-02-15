@@ -638,6 +638,7 @@
       backdrop-filter: blur(1px);
       display: flex;
       align-items: center;
+		justify-content: start;
       gap: rem(15);
       width: rem(219);
       height: rem(61);
@@ -649,7 +650,9 @@
          font-size: rem(31);
          color: #fff;
          position: relative;
-			border: 2px solid red;
+			img {
+				padding-bottom: rem(31);
+			}
       }
       ._icon-play::after {
          content: "";
