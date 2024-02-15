@@ -1,16 +1,21 @@
-<svg width="93" height="61" viewBox="0 0 93 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Sunity">
-<rect id="Rectangle 53" x="14" width="67" height="50" rx="5" fill="#FFD51C"/>
-<g id="Eyes">
-<g id="Group 4">
-<ellipse id="Ellipse 2" cx="33.5" cy="26" rx="11.5" ry="11" fill="white"/>
+<svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="93" height="93" rx="10" fill="url(#paint0_linear_443_4634)"/>
+<mask id="mask0_443_4634" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="93" height="93">
+<rect width="93" height="93" rx="10" fill="#F0E8E0"/>
+</mask>
+<g mask="url(#mask0_443_4634)">
+<rect x="14" y="32" width="67" height="50" rx="5" fill="#FFD51C"/>
+<ellipse cx="33.5" cy="58" rx="11.5" ry="11" fill="white"/>
+<circle cx="37.5" cy="57.5" r="6.5" fill="#1C1C1C"/>
+<ellipse cx="62.5" cy="58" rx="11.5" ry="11" fill="white"/>
+<circle cx="59.5" cy="57.5" r="6.5" fill="#1C1C1C"/>
+<path d="M32 86.5H64" stroke="#FFD51C" stroke-width="3" stroke-linecap="round"/>
 </g>
-<circle id="Ellipse 4" cx="37.5" cy="25.5" r="6.5" fill="#1C1C1C"/>
-<g id="Group 5">
-<ellipse id="Ellipse 2_2" cx="62.5" cy="26" rx="11.5" ry="11" fill="white"/>
-</g>
-<circle id="Ellipse 5" cx="59.5" cy="25.5" r="6.5" fill="#1C1C1C"/>
-</g>
-<path id="Line 5" d="M32 54.5H64" stroke="#FFD51C" stroke-width="3" stroke-linecap="round"/>
-</g>
+<defs>
+<linearGradient id="paint0_linear_443_4634" x1="46.5" y1="0" x2="46.5" y2="93" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F0E8E0"/>
+<stop offset="0.39416" stop-color="#FBDA53" stop-opacity="0.27"/>
+<stop offset="1" stop-color="#FFD51C" stop-opacity="0"/>
+</linearGradient>
+</defs>
 </svg>

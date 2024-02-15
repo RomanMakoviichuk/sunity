@@ -1,12 +1,20 @@
 <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_443_4706" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="93" height="93">
+<rect width="93" height="93" rx="10" fill="url(#paint0_linear_443_4704)"/>
+<mask id="mask0_443_4704" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="93" height="93">
 <rect width="93" height="93" rx="10" fill="#F0E8E0"/>
 </mask>
-<g mask="url(#mask0_443_4706)">
+<g mask="url(#mask0_443_4704)">
 <ellipse cx="47" cy="93.1695" rx="49" ry="47.5081" fill="#FFD51C"/>
 <circle cx="34.5" cy="93.5" r="11.5" fill="white"/>
 <circle cx="64.5" cy="94.5" r="11.5" fill="white"/>
 <ellipse cx="34.5" cy="92" rx="7.5" ry="7" fill="#1C1C1C"/>
 <ellipse cx="64.5" cy="93" rx="7.5" ry="7" fill="#1C1C1C"/>
 </g>
+<defs>
+<linearGradient id="paint0_linear_443_4704" x1="46.5" y1="0" x2="46.5" y2="93" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F0E8E0"/>
+<stop offset="0.719925" stop-color="#FBDA53" stop-opacity="0.27"/>
+<stop offset="1" stop-color="#FFD51C"/>
+</linearGradient>
+</defs>
 </svg>

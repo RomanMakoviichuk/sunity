@@ -1,15 +1,11 @@
 <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Sunity">
-<rect id="Background" width="93" height="93" rx="10" fill="url(#paint0_linear_2460_2498)"/>
-<rect id="Rectangle" x="18" y="22" width="58" height="65" rx="4" fill="#FFD51C"/>
-<g id="Eyes">
-<rect id="Rectangle 51" x="25.9998" y="30.0005" width="21" height="13" rx="6.5" fill="white"/>
-<circle id="Ellipse 6" cx="33.4998" cy="36.5005" r="5.5" fill="#1C1C1C"/>
-<rect id="Rectangle 52" x="48.9998" y="30.0005" width="21" height="13" rx="6.5" fill="white"/>
-<circle id="Ellipse 7" cx="56.4998" cy="36.5005" r="5.5" fill="#1C1C1C"/>
-</g>
-<circle id="Ellipse 8" cx="47.5" cy="65.5" r="13.5" fill="#FFF5C9"/>
-</g>
+<rect width="93" height="93" rx="10" fill="url(#paint0_linear_2460_2498)"/>
+<rect x="18" y="22" width="58" height="65" rx="4" fill="#FFD51C"/>
+<rect x="25.9998" y="30.0005" width="21" height="13" rx="6.5" fill="white"/>
+<circle cx="33.4998" cy="36.5005" r="5.5" fill="#1C1C1C"/>
+<rect x="48.9998" y="30.0005" width="21" height="13" rx="6.5" fill="white"/>
+<circle cx="56.4998" cy="36.5005" r="5.5" fill="#1C1C1C"/>
+<circle cx="47.5" cy="65.5" r="13.5" fill="#FFF5C9"/>
 <defs>
 <linearGradient id="paint0_linear_2460_2498" x1="46.5" y1="0" x2="46.5" y2="93" gradientUnits="userSpaceOnUse">
 <stop stop-color="#F0E8E0"/>

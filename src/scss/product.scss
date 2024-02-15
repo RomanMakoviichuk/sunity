@@ -98,7 +98,6 @@
 
    .services__item-img {
       border-radius: 10px;
-      background: #f7e7b8;
       width: 93px;
       height: 93px;
       text-align: center;
@@ -650,6 +649,7 @@
          font-size: rem(31);
          color: #fff;
          position: relative;
+			border: 2px solid red;
       }
       ._icon-play::after {
          content: "";
