@@ -186,7 +186,7 @@ if (calcCanvas) {
 
 const productCanvas = document.getElementById("product_canvas");
 if (productCanvas) {
-  createEyeAnimation("product_canvas", 30);
+  createEyeAnimation("product_canvas", 40);
 }
 
 //========================================================================================================================================================
