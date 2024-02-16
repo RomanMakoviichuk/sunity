@@ -72,6 +72,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"accordion-js": "^3.3.4",
 		"animate.css": "^4.1.1",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",

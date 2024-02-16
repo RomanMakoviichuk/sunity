@@ -494,3 +494,27 @@ function setTransform(el, transform) {
   el.style.WebkitTransform = transform;
   el.style["will-change"] = transform;
 }
+
+//========================================================================================================================================================
+const accordionItems = document.querySelectorAll(
+  ".questionnaire__content_item"
+);
+
+accordionItems.forEach((item) => {
+  const header = item.querySelector(".accordion__header");
+  const content = item.querySelector(".accordion__content");
+
+  header.addEventListener("click", () => {
+    const isOpen = item.classList.contains("active");
+
+    accordionItems.forEach((otherItem) => {
+      otherItem.classList.remove("active");
+      otherItem.querySelector(".accordion__content").style.maxHeight = 0;
+    });
+
+    if (!isOpen) {
+      item.classList.add("active");
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});

@@ -1006,7 +1006,7 @@ body {
       height: rem(655);
       position: absolute;
       z-index: -1;
-      left: 0;
+      left: rem(178);
       bottom: 0;
       margin-left: rem(178);
       border-radius: rem(25) 0 0 0;
@@ -1029,7 +1029,8 @@ body {
 
    &__wrapper {
       display: flex;
-		justify-content: center;
+		justify-content: flex-end;
+		align-items: flex-start;
       color: #fff;
       @include adaptiveValue("gap", 111, 20);
 		height: rem(655);
