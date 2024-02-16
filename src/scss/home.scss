@@ -591,9 +591,6 @@ body {
 .parallax {
    &__body {
       overflow: hidden;
-      // background-image: url("https://cdn.shopify.com/s/files/1/0807/4900/3083/files/background.jpg?v=1707774657");
-      // background-size: contain;
-      // background-repeat: no-repeat;
       position: sticky;
       top: 50px;
       width: 100%;
@@ -642,9 +639,6 @@ body {
       justify-content: center;
       position: relative;
 
-      // @media (max-width: $tablet) {
-      //    height: rem(729);
-      // }
    }
 
    &__item {
@@ -916,8 +910,8 @@ body {
 
 //========================================================================================================================================================
 .produce {
-   min-height: 100vh;
    @include adaptiveValue("margin-top", 210, 230);
+	padding: 0;
 
    &__container {
       display: flex;
@@ -995,9 +989,6 @@ body {
          text-decoration-line: underline;
       }
 
-      &_img {
-         // padding: rem(25) rem(56) rem(30) rem(32);
-      }
    }
 
    &__item:last-child {
@@ -1012,11 +1003,11 @@ body {
       content: "";
       background: #1c1c1c;
       width: 100%;
-      height: 100%;
+      height: rem(655);
       position: absolute;
       z-index: -1;
       left: 0;
-      top: 0;
+      bottom: 0;
       margin-left: rem(178);
       border-radius: rem(25) 0 0 0;
 
@@ -1028,14 +1019,20 @@ body {
          border-radius: rem(15) rem(15) 0 0;
       }
    }
+	
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: 100vh;
+	}
 
    &__wrapper {
       display: flex;
-      align-items: center;
+		justify-content: center;
       color: #fff;
       @include adaptiveValue("gap", 111, 20);
-      min-height: 100vh;
-
+		height: rem(655);
       @media (max-width: $tablet) {
          flex-direction: column;
       }
@@ -1043,7 +1040,7 @@ body {
 
    &__content {
       &_title {
-         width: rem(377);
+         max-width: rem(377);
          @include adaptiveValue("font-size", 60, 30);
          font-style: normal;
          font-weight: 700;
@@ -1109,10 +1106,13 @@ body {
       position: absolute;
       width: 35.5625rem;
       height: 34.125rem;
-      left: rem(35);
+      left: rem(-150);
       bottom: rem(-350);
       border-radius: 50%;
       background-color: $yellow;
+		.canvas {
+			left: rem(180);
+		}
 
       @media (max-width: $tablet) {
          left: rem(-120);
