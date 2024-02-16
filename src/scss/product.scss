@@ -34,8 +34,6 @@
 }
 
 //========================================================================================================================================================
-.product__advantages {
-}
 .item1 {
 	@media (max-width: em(992)){
 		  margin-left: 0;
@@ -61,6 +59,21 @@
    }
 	@media (max-width: em(992)){
 		margin-top: rem(291);
+		position: relative;
+	}
+	::before{
+		@media (max-width:$tablet){
+			content: "";
+			width: 50%;
+			height: 40%;
+			bottom: 0;
+			z-index: -2;
+		@include adaptiveValue("right", -200, 0);
+			background-image: url(../img/product/services/sun.png);
+			background-repeat: no-repeat;
+			position: absolute;
+			filter: blur(100px);
+		}
 	}
 }
 
@@ -71,7 +84,6 @@
 }
 
 .product__decor {
-	z-index: -1;
    width: rem(361);
    height: rem(350);
    right: rem(-150);
@@ -83,6 +95,7 @@
    @media (max-width: em(992)) {
       top: rem(-500);
 		left: rem(0);
+		z-index: -1;
    }
 	@media (max-width: em(768)){
 		  top: rem(-700);
@@ -111,20 +124,6 @@
 .product__services_container {
 	@media (max-width:$tablet){
 		gap: rem(74);
-	}
-}
-.product__services_container::before{
-	@media (max-width:$tablet){
-		content: "";
-		width: 100%;
-		height: 100%;
-		top: -30%;
-		z-index: -22;
-		@include adaptiveValue("right", -1000, -100);
-		background-image: url(../img/product/services/sun.png);
-		background-repeat: no-repeat;
-		position: absolute;
-		filter: blur(100px);
 	}
 }
 .services__title ._icon-charge {
