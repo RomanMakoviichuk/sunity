@@ -172,63 +172,10 @@ if (calcCanvas) {
   createEyeAnimation("calc_canvas");
 }
 
-//========================================================================================================================================================
-
-// const el = document.querySelector(".parallax__container");
-// const items = document.querySelectorAll(".parallax__item");
-
-// const offset = 300;
-// const transforms = [-17, 5, -6, -6, -12, 10, 16, -15, 14, -17];
-// let lastScrollVal = 0;
-
-// const getCurrentRotation = (element) => {
-// 	const style = window.getComputedStyle(element);
-// 	const transform = style.getPropertyValue("transform");
-// 	const matrix = transform.match(/^matrix\((.+)\)$/);
-
-// 	let rotation = 0;
-
-// 	if (matrix) {
-// 		const values = matrix[1].split(",");
-// 		const a = values[0];
-// 		const b = values[1];
-// 		rotation = Math.atan2(b, a) * (180 / Math.PI);
-// 	}
-
-// 	return rotation;
-// };
-
-// const originalTopValues = Array.from(items).map(item => parseInt(getComputedStyle(item).top));
-
-// window.addEventListener("scroll", () => {
-// 	const direction = window.scrollY > lastScrollVal ? "forward" : "backward";
-
-// 	if (window.scrollY >= el.offsetTop - offset) {
-// 		items.forEach((item, i) => {
-// 			let nextRotation;
-// 			if (direction === "forward") {
-// 				nextRotation = getCurrentRotation(item) + 1;
-// 			} else {
-// 				nextRotation = getCurrentRotation(item) - 1;
-// 			}
-
-// 			const rotationEnabled = Math.abs(nextRotation) < Math.abs(transforms[i]);
-// 			if (rotationEnabled) {
-// 				item.style.transform = `rotate(${nextRotation}deg)`;
-// 			}
-
-// 			let newTop;
-// 			if (direction === "forward") {
-// 				newTop = Math.min(parseInt(getComputedStyle(item).top) + 3, originalTopValues[i] + 100);
-// 			} else {
-// 				newTop = Math.max(parseInt(getComputedStyle(item).top) - 3, originalTopValues[i] - 100);
-// 			}
-// 			item.style.top = `${newTop}px`;
-// 		});
-// 	}
-
-// 	lastScrollVal = window.scrollY;
-// });
+const productCanvas = document.getElementById("product_canvas");
+if (productCanvas) {
+  createEyeAnimation("product_canvas", 10);
+}
 
 //========================================================================================================================================================
 /*=============== RANGE SLIDER JS ===============*/

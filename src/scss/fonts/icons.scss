@@ -28,7 +28,7 @@
  ._icon-marker:before {
 	content: "\e90e";
  }
- ._icon-plug1:before {
+ ._icon-plug:before {
 	content: "\e90f";
  }
  ._icon-star:before {
@@ -58,18 +58,14 @@
  ._icon-calendar:before {
 	content: "\e918";
  }
- ._icon-charge-big .path1:before {
-	content: "\e901";
-	color: rgb(28, 28, 28);
- }
- ._icon-charge-big .path2:before {
+
+ ._icon-charge-big:before {
 	content: "\e902";
-	margin-left: -1.017578125em;
 	color: rgb(255, 213, 28);
  }
  ._icon-charge:before {
 	content: "\e903";
-	color: #9d9d9d;
+	color: #ffd51c;
  }
  ._icon-solar:before {
 	content: "\e908";

@@ -166,12 +166,11 @@ body {
 
    &__container {
       display: flex;
-      justify-content: space-between;
-      padding: rem(50) rem(15);
+      justify-content: space-around;
+      padding: rem(50) 0;
       align-items: center;
       font-size: rem(16);
       gap: rem(25);
-      max-width: rem(1077);
 
       @media (max-width: $tablet) {
          flex-direction: column;
@@ -1009,7 +1008,6 @@ body {
 //========================================================================================================================================================
 .questions {
    position: relative;
-
    &::before {
       content: "";
       background: #1c1c1c;

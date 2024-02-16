@@ -2,6 +2,11 @@
    min-height: 100vh;
 }
 
+.product__slider-title {
+	@include adaptiveValue("font-size", 60, 40);
+	height: 100%;
+}
+
 .product__slider-wrapper {
    width: 100%;
    margin: rem(22) 0 rem(51) 0;
@@ -11,15 +16,35 @@
 ._icon-plug {
    display: inline-block;
    vertical-align: middle;
-   font-size: rem(48);
+   @include adaptiveValue("font-size", 60, 40);
+}
+
+.watch__btn {
+	margin-top: rem(48);
+	@include adaptiveValue("margin-top", 48, 180);
+@media (max-width: em(370)){
+	  margin-top: rem(80);
+}
+	span {
+		color: #fff;
+		
+	}
 }
 
 //========================================================================================================================================================
-
+.item1 {
+	@media (max-width: em(1545)){
+		  @include adaptiveValue("margin-left", 120, 80);
+	}
+	@media (max-width: em(992)){
+		  margin-left: 0;
+	}
+}
 .advantages__items {
    display: flex;
-   justify-content: space-between;
-   gap: rem(20);
+   justify-content:space-around;
+	gap: rem(58);
+	width: 100%;
 
    @media (max-width: em(992)) {
       flex-direction: column;
@@ -29,8 +54,6 @@
 
 .product-advantages__container {
    display: flex;
-   justify-content: space-between;
-
    @media (max-width: em(1545)) {
       flex-direction: column;
       margin-top: rem(150);
@@ -45,21 +68,25 @@
 .product__decor {
    width: rem(361);
    height: rem(350);
-   right: rem(-200);
-   top: rem(-150);
+   right: rem(-300);
+   top: rem(-80);
    position: absolute;
    background-color: $yellow;
    border-radius: 50%;
 
    @media (max-width: em(1545)) {
-      // @include adaptiveValue("top", -300, -610);
-      top: rem(-300);
+      top: rem(-190);
+		left: rem(-700);
       z-index: -2;
    }
 
    @media (max-width: em(992)) {
-      top: rem(-620);
+      top: rem(-500);
+		left: rem(-150);
    }
+	@media (max-width: em(768)){
+		  top: rem(-700);
+	}
 
    .canvas {
       left: rem(0);
@@ -172,14 +199,17 @@
       background: #1c1c1c;
       border-radius: 25px;
       color: #fff;
-      padding: 28px 20px 28px 70px; /* top right bottom left */
+      padding: rem(66) rem(72) rem(83) rem(70); 
       gap: 46px;
       width: 40%;
+		@media (max-width: rem(1150)){
+			padding: rem(28) rem(20) rem(28) rem(20);
+		}
 
       @media (max-width: 768px) {
          width: 100%;
          border-radius: 0 0 25px 25px;
-         padding-left: 20px;
+         padding: rem(28) rem(20) rem(28) rem(20);
       }
 
       &_title {
@@ -262,6 +292,8 @@
 
 .item__content {
    padding-top: 10px;
+	font-weight: 700;
+	font-size: rem(15);
 
    span {
       display: none;
@@ -325,13 +357,14 @@
       display: flex;
       flex-direction: column;
       position: relative;
+		background-repeat: no-repeat;
       ::after {
          content: "";
          width: 100%;
          height: 100%;
          background: url(../img/product/aspects/block1.png);
-         background-repeat: no-repeat;
-         background-position: bottom right;
+         background-repeat: no-repeat!important;
+         background-position: bottom right!important;
          background-size: 50%;
          position: absolute;
          top: 0;
@@ -345,11 +378,12 @@
       .block__title {
          display: flex;
          align-items: center;
-         align-self: center;
          padding-bottom: rem(39);
 
          ._icon-charge-big {
             text-shadow: $mainColor 2px 3px;
+				@include adaptiveValue("font-size", 58 ,48);
+
          }
 
          @media (max-width: $tablet) {
@@ -431,8 +465,9 @@
 
       .block__title {
          margin-bottom: rem(43);
-         width: rem(288);
+         max-width: rem(288);
          font-size: rem(40);
+			font-weight: 700;
          width: 95%;
       }
 
@@ -485,10 +520,15 @@
       color: $mainColor;
       display: flex;
       align-items: center;
+		padding: rem(0) rem(106);
+		min-height: rem(388);
+		padding: rem(47) 0 rem(26) rem(106);
       @include adaptiveValue("gap", 156, 20);
       @media (max-width: $tablet) {
          flex-direction: column-reverse;
          justify-content: space-between;
+			align-items: center;
+			padding: rem(47) rem(20);
       }
       .block__title {
          @include adaptiveValue("font-size", 60, 30);
@@ -508,6 +548,7 @@
          display: flex;
          align-items: center;
          @include adaptiveValue("gap", 57, 0);
+			@include adaptiveValue("padding-top", 57, 20);
 
          @media (max-width: $tablet) {
             flex-direction: column;
@@ -560,6 +601,7 @@
    &__container {
       display: flex;
       flex-direction: column;
+		max-width: rem(971);
    }
 
    &__title {
@@ -577,10 +619,13 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      @include adaptiveValue("gap", 79, 15);
+		gap: rem(20);
       justify-content: space-between;
       @include adaptiveValue("margin-top", 90, 49);
       @include adaptiveValue("margin-bottom", 151, 79);
+		@media (max-width:$mobile){
+			 justify-content: center; 
+		}
 
       &_item {
          display: flex;
@@ -672,15 +717,9 @@
 //========================================================================================================================================================
 
 .questionnaire {
-   background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      #fff 8.51%,
-      #fff 54.35%,
-      rgba(255, 255, 255, 0) 100%
-   );
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 8.51%, #FFF 100%);
    @include adaptiveValue("padding-top", 291, 169);
-   @include adaptiveValue("padding-bottom", 209, 245);
+   @include adaptiveValue("padding-bottom", 243, 245);
    &__container {
       display: flex;
       gap: rem(77);
@@ -767,4 +806,10 @@
          }
       }
    }
+}
+
+.product__benefits {
+	background-color: #fff;
+	margin-top: 0;
+
 }

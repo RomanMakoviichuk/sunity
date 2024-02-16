@@ -5,7 +5,7 @@
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
-		<main class="page">
+		<main class="product__page">
 			<section class="product">
 				<div class="product__container">
 					<div class="calc__nav">
@@ -34,7 +34,14 @@
 							<div class="_icon-solar"></div>
 							<br />à brancher sur simple prise
 							<div class="_icon-plug"></div>
+							<div class="showcase__btn watch__btn">
+								<div class="_icon-play">
+									<img src="@img/product/play.svg" alt="icon">
+								</div>
+								<span>Regader le film</span>
+							</div>
 						</div>
+
 						<div class="main__slider slider">
 							<img src="@img/slider_1/1.jpg" class="slide active" />
 							<img src="@img/slider_1/3.jpg" class="slide" />
@@ -58,41 +65,43 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="advantages">
-				<div class="advantages__container product-advantages__container">
-					<div class="advantages__items">
-						<div class="advantages__item item1">
-							<span class="_icon-marker"></span>
-							<p>
-								Matériel conçu et assemblé à <span>Orléans</span> en <span>France</span>
-							</p>
-						</div>
-						<div class="advantages__item item2">
-							<span class="percents">-34%</span>
-							<p>
-								Réduction moyenne de vos <span>factures d’énergie</span> grâce à
-								<span>Sunity</span>
-							</p>
-						</div>
-						<div class="advantages__item item3">
-							<span class="_icon-star"></span>
-							<div class="item3__wrapper">
-								<p>Trustpilot</p>
-								<div class="rating">
-									<img src="@img/Stars.svg" alt="image" />
-									<span>4.6/5</span>
+				<section class="advantages">
+					<div class="advantages__container product-advantages__container">
+						<div class="advantages__items">
+							<dv class="advantages__item item1">
+								<span class="_icon-marker"></span>
+								<p>
+									Matériel conçu et assemblé à <span>Orléans</span> en <span>France</span>
+								</p>
+							</dv>
+							<div class="advantages__item item2">
+								<span class="percents">-34%</span>
+								<p>
+									Réduction moyenne de vos <span>factures d’énergie</span> grâce à
+									<span>Sunity</span>
+								</p>
+							</div>
+							<div class="advantages__item item3">
+								<span class="_icon-star"></span>
+								<div class="item3__wrapper">
+									<p>Trustpilot</p>
+									<div class="rating">
+										<img src="@img/Stars.svg" alt="image" />
+										<span>4.6/5</span>
+									</div>
+								</div>
+							</div>
+							<div class="decor__wrapper">
+								<div class="product__decor sun">
+									<canvas class="canvas" id="product_canvas"></canvas>
 								</div>
 							</div>
 						</div>
+
 					</div>
-					<div class="decor__wrapper">
-						<div class="product__decor sun">
-							<canvas class="canvas" id="main_canvas"></canvas>
-						</div>
-					</div>
-				</div>
+				</section>
 			</section>
+
 
 			<section class="services">
 				<div class="services__container product__services_container">
@@ -640,8 +649,8 @@
 			<section class="showcase">
 				<div class="showcase__container">
 					<h3 class="showcase__undertitle">Visite guidée</h3>
-					<h2 class="showcase__title">Le kit solaire double face Sunity</h2>
-					<div class="showcase__btn">
+					<h2 class="showcase__title">Le kit solaire <br>double face Sunity</h2>
+					<div class="showcase__btn watch__btn">
 						<div class="_icon-play">
 							<img src="@img/product/play.svg" alt="icon">
 						</div>
@@ -696,7 +705,7 @@
 				</div>
 			</section>
 
-			<section class="benefits">
+			<section class="benefits product__benefits">
 				<div class="benefits__container">
 					<div class="benefits__img">
 						<img src="@img/benefits/phone.svg" alt="icon" />
@@ -735,7 +744,7 @@
 				</div>
 			</section>
 
-			<section class="questions">
+			<section class="questions product__questions">
 				<div class="questions__container">
 					<div class="questions__wrapper">
 						<div class="questions__content">
