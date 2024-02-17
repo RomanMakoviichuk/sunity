@@ -3,15 +3,15 @@
 }
 
 .product__slider-title {
-	@include adaptiveValue("font-size", 60, 40);
-	height: 100%;
+   @include adaptiveValue("font-size", 60, 40);
+   height: 100%;
 }
 
 .product__slider-wrapper {
    width: 100%;
-	height: rem(589);
-	justify-content: start;
-	margin-top: rem(22);
+   height: rem(589);
+   justify-content: start;
+   margin-top: rem(22);
 }
 
 ._icon-solar,
@@ -22,109 +22,110 @@
 }
 
 .watch__btn {
-	margin-top: rem(48);
-	@include adaptiveValue("margin-top", 48, 180);
-@media (max-width: em(370)){
-	  margin-top: rem(80);
-}
-	span {
-		color: #fff;
-		
-	}
+   margin-top: rem(48);
+   @include adaptiveValue("margin-top", 48, 180);
+   @media (max-width: em(370)) {
+      margin-top: rem(80);
+   }
+   span {
+      color: #fff;
+   }
 }
 
 //========================================================================================================================================================
 .item1 {
-	@media (max-width: em(992)){
-		  margin-left: 0;
-	}
+   @media (max-width: em(992)) {
+      margin-left: 0;
+   }
 }
 .advantages__items {
    display: flex;
    justify-content: space-evenly;
-	gap: rem(58);
-	width: 100%;
-	flex-shrink: 0;
+   gap: rem(58);
+   padding-right: rem(200);
+   width: 100%;
+   flex-shrink: 0;
    @media (max-width: em(992)) {
+      padding-right: 0px;
       flex-direction: column;
       align-items: center;
    }
 }
 
 .product-advantages__container {
+   position: relative;
    display: flex;
-	margin-top: rem(51);
+   margin-top: rem(51);
+   max-width: rem(1360) !important;
    @media (max-width: em(1545)) {
       flex-direction: column;
    }
-	@media (max-width: em(992)){
-		margin-top: rem(291);
-		position: relative;
-	}
-	::before{
-		@media (max-width:$tablet){
-			content: "";
-			width: 50%;
-			height: 40%;
-			bottom: 0;
-			z-index: -2;
-		@include adaptiveValue("right", -200, 0);
-			background-image: url(../img/product/services/sun.png);
-			background-repeat: no-repeat;
-			position: absolute;
-			filter: blur(100px);
-		}
-	}
+   @media (max-width: em(992)) {
+      margin-top: rem(291);
+      position: relative;
+   }
+   ::before {
+      @media (max-width: $tablet) {
+         content: "";
+         width: 50%;
+         height: 40%;
+         bottom: 0;
+         z-index: -2;
+         @include adaptiveValue("right", -200, 0);
+         background-image: url(../img/product/services/sun.png);
+         background-repeat: no-repeat;
+         position: absolute;
+         filter: blur(100px);
+      }
+   }
 }
 
 .decor__wrapper {
-   position: relative;
+   position: absolute;
+   right: 0;
+   bottom: 0;
+
    height: 100%;
-	width: rem(270);
+   width: rem(270);
 }
 
 .product__decor {
    width: rem(361);
    height: rem(350);
    right: rem(-150);
-   top: rem(-80);
+   top: rem(-50);
    position: absolute;
    background-color: $yellow;
    border-radius: 50%;
 
    @media (max-width: em(992)) {
-      top: rem(-500);
-		left: rem(0);
-		z-index: -1;
+      top: rem(-175);
+      right: rem(-100);
+      z-index: -1;
+      width: rem(477);
+      height: rem(463);
    }
-	@media (max-width: em(768)){
-		  top: rem(-700);
-		  left: rem(-50);
-		  width: rem(500);
-		  height: rem(500);
-
-	}
 
    .product__canvas {
       left: rem(30);
-		top: rem(20);
-		width: rem(250);
-		@media (max-width: em(768)){
-			  left: rem(120);
-			  top: rem(10);
-			  width: rem(240);
-		}
+      top: rem(20);
+      width: rem(250);
+      @media (max-width: em(768)) {
+         left: rem(120);
+         top: rem(10);
+         width: rem(240);
+      }
    }
 }
 
 //========================================================================================================================================================
 .product__advantages {
-	z-index: 12;
+   z-index: 12;
 }
 .product__services_container {
-	@media (max-width:$tablet){
-		gap: rem(74);
-	}
+   @media (max-width: $tablet) {
+      gap: rem(74);
+   }
 }
 .services__title ._icon-charge {
    display: inline-block;
@@ -135,20 +136,20 @@
 
 .services__title.product__services-title {
    text-align: center;
-	font-weight: 700;
-	@media (max-width:$tablet){
-		font-size: rem(30);
-		text-align: left;
-		span{
-			display: block;
-		}
-	}
+   font-weight: 700;
+   @media (max-width: $tablet) {
+      font-size: rem(30);
+      text-align: left;
+      span {
+         display: block;
+      }
+   }
 }
 .product__services_items {
-	gap: rem(20);
-	@media (max-width:$tablet){
-		display: none;
-	}
+   gap: rem(20);
+   @media (max-width: $tablet) {
+      display: none;
+   }
 }
 .services__item ._icon-charge {
    display: inline-block;
@@ -157,28 +158,28 @@
    color: #9d9d9d;
 }
 .product__services-slider {
-	@media (max-width:$tablet){
-		margin: 0;
-	}
+   @media (max-width: $tablet) {
+      margin: 0;
+   }
 }
 .product__services-slider .services__item-title {
    padding-bottom: rem(52);
 }
 .product__slider-progress {
-	max-width: rem(843);
-	padding-left: rem(20);
+   max-width: rem(843);
+   padding-left: rem(20);
 }
 .product__services_actions {
-	@media (max-width:$tablet){
-		order: 1;
-		margin-bottom: rem(188);
-	}
+   @media (max-width: $tablet) {
+      order: 1;
+      margin-bottom: rem(188);
+   }
 }
 .product__services-item {
    text-align: center;
-	._icon-charge {
-		color: #9D9D9D;
-	}
+   ._icon-charge {
+      color: #9d9d9d;
+   }
    span {
       color: #9d9d9d;
    }
@@ -204,14 +205,14 @@
 .product {
    &__services {
       &_container {
-			max-width: rem(1360);
+         max-width: rem(1360);
       }
       &_info {
          display: flex;
          @include adaptiveValue("gap", 46, 10);
          justify-content: center;
          margin-top: rem(21);
-			font-size: rem(10);
+         font-size: rem(10);
       }
    }
 }
@@ -254,12 +255,12 @@
       background: #1c1c1c;
       border-radius: 25px;
       color: #fff;
-      padding: rem(66) rem(72) rem(83) rem(70); 
+      padding: rem(66) rem(72) rem(83) rem(70);
       gap: 46px;
       width: 40%;
-		@media (max-width: rem(1150)){
-			padding: rem(28) rem(20) rem(28) rem(20);
-		}
+      @media (max-width: rem(1150)) {
+         padding: rem(28) rem(20) rem(28) rem(20);
+      }
 
       @media (max-width: 768px) {
          width: 100%;
@@ -347,8 +348,8 @@
 
 .item__content {
    padding-top: 10px;
-	font-weight: 700;
-	font-size: rem(15);
+   font-weight: 700;
+   font-size: rem(15);
 
    span {
       display: none;
@@ -412,14 +413,14 @@
       display: flex;
       flex-direction: column;
       position: relative;
-		background-repeat: no-repeat;
+      background-repeat: no-repeat;
       ::after {
          content: "";
          width: 100%;
          height: 100%;
          background: url(../img/product/aspects/block1.png);
-         background-repeat: no-repeat!important;
-         background-position: bottom right!important;
+         background-repeat: no-repeat !important;
+         background-position: bottom right !important;
          background-size: 50%;
          position: absolute;
          top: 0;
@@ -437,8 +438,7 @@
 
          ._icon-charge-big {
             text-shadow: $mainColor 2px 3px;
-				@include adaptiveValue("font-size", 58 ,48);
-
+            @include adaptiveValue("font-size", 58, 48);
          }
 
          @media (max-width: $tablet) {
@@ -522,7 +522,7 @@
          margin-bottom: rem(43);
          max-width: rem(288);
          font-size: rem(40);
-			font-weight: 700;
+         font-weight: 700;
          width: 95%;
       }
 
@@ -575,15 +575,15 @@
       color: $mainColor;
       display: flex;
       align-items: center;
-		min-height: rem(388);
-		padding: rem(47) rem(106) rem(26) rem(106);
+      min-height: rem(388);
+      padding: rem(47) rem(106) rem(26) rem(106);
 
       @include adaptiveValue("gap", 156, 20);
       @media (max-width: $tablet) {
          flex-direction: column-reverse;
          justify-content: space-between;
-			align-items: center;
-			padding: rem(47) rem(20);
+         align-items: center;
+         padding: rem(47) rem(20);
       }
       .block__title {
          @include adaptiveValue("font-size", 60, 30);
@@ -603,7 +603,7 @@
          display: flex;
          align-items: center;
          @include adaptiveValue("gap", 57, 0);
-			@include adaptiveValue("padding-top", 57, 20);
+         @include adaptiveValue("padding-top", 57, 20);
 
          @media (max-width: $tablet) {
             flex-direction: column;
@@ -639,7 +639,7 @@
       align-items: center;
       gap: rem(10);
       font-weight: 700;
-		cursor: pointer;
+      cursor: pointer;
 
       p {
          text-decoration: underline;
@@ -656,7 +656,7 @@
    &__container {
       display: flex;
       flex-direction: column;
-		max-width: rem(971);
+      max-width: rem(971);
    }
 
    &__title {
@@ -674,13 +674,13 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-		gap: rem(20);
+      gap: rem(20);
       justify-content: space-between;
       @include adaptiveValue("margin-top", 90, 49);
       @include adaptiveValue("margin-bottom", 151, 79);
-		@media (max-width:$mobile){
-			 justify-content: center; 
-		}
+      @media (max-width: $mobile) {
+         justify-content: center;
+      }
 
       &_item {
          display: flex;
@@ -738,12 +738,12 @@
       backdrop-filter: blur(1px);
       display: flex;
       align-items: center;
-		justify-content: start;
+      justify-content: start;
       gap: rem(15);
       width: rem(219);
       height: rem(61);
       border-radius: rem(10);
-		cursor: pointer;
+      cursor: pointer;
       span {
          font-size: rem(17);
       }
@@ -751,9 +751,9 @@
          font-size: rem(31);
          color: #fff;
          position: relative;
-			img {
-				padding-bottom: rem(31);
-			}
+         img {
+            padding-bottom: rem(31);
+         }
       }
       ._icon-play::after {
          content: "";
@@ -773,25 +773,25 @@
 //========================================================================================================================================================
 
 .questionnaire {
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 8.51%, #FFF 100%);
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 8.51%, #fff 100%);
    @include adaptiveValue("padding-top", 291, 169);
    @include adaptiveValue("padding-bottom", 243, 245);
    &__container {
       display: flex;
-		justify-content: space-between;
+      justify-content: space-between;
       gap: rem(77);
-		@media (max-width:$tablet){
-			flex-direction: column;
-		}
+      @media (max-width: $tablet) {
+         flex-direction: column;
+      }
    }
 
    &__image {
       position: relative;
-		padding-top: rem(22);
-		height: 100%;
-		img {
-			width: 100%;
-		}
+      padding-top: rem(22);
+      height: 100%;
+      img {
+         width: 100%;
+      }
    }
    &__image::after {
       content: "AR";
@@ -807,11 +807,11 @@
    &__content {
       display: flex;
       flex-direction: column;
-		width: rem(756);
-		@media (max-width: em(1200)){
-			align-self: center;
-			width: auto;
-		}
+      width: rem(756);
+      @media (max-width: em(1200)) {
+         align-self: center;
+         width: auto;
+      }
 
       &_title {
          @include adaptiveValue("font-size", 60, 40);
@@ -822,7 +822,7 @@
          border-radius: 25px;
          background: #fbf3ea;
          padding: 0 rem(26);
-			flex: 1;
+         flex: 1;
       }
       &_item {
          @include adaptiveValue("font-size", 15, 13);
@@ -831,24 +831,23 @@
          cursor: pointer;
          line-height: rem(20);
          display: flex;
-			flex-direction: column;
+         flex-direction: column;
          justify-content: flex-start;
-			
-			.accordion__header {
-				display: flex;
-				align-items: center;
-				text-align: left;
-			}
-			.accordion__content {
-				overflow: hidden;
-   			max-height: 0;
-   			transition: max-height 1s ease;
-				p {
-					text-align: left;
-					display: none;
-					
-				}
-			}
+
+         .accordion__header {
+            display: flex;
+            align-items: center;
+            text-align: left;
+         }
+         .accordion__content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 1s ease;
+            p {
+               text-align: left;
+               display: none;
+            }
+         }
 
          ._icon-x {
             display: inline-block;
@@ -858,15 +857,15 @@
             color: #b4aea8;
          }
       }
-		&_item.active {
-			.accordion__content {
-				max-height: rem(200);
-				p {
-					display: block;
-					padding-top: rem(20);
-				}
-			}
-		}
+      &_item.active {
+         .accordion__content {
+            max-height: rem(200);
+            p {
+               display: block;
+               padding-top: rem(20);
+            }
+         }
+      }
       &_item:last-child {
          border-bottom: none;
       }
@@ -895,13 +894,12 @@
 }
 
 .product__benefits {
-	background-color: #fff;
-	margin-top: 0;
-
+   background-color: #fff;
+   margin-top: 0;
 }
 
 .product__questions {
-	&::after {
+   &::after {
       content: "";
       background: #fff;
       width: 200%;
