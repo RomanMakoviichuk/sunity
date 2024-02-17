@@ -160,6 +160,7 @@
 .product__services-slider {
    @media (max-width: $tablet) {
       margin: 0;
+      height: auto;
    }
 }
 .product__services-slider .services__item-title {
