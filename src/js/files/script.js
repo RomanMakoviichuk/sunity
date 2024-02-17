@@ -482,12 +482,13 @@ accordionItems.forEach((item) => {
 
       accordionItems.forEach((otherItem) => {
          otherItem.classList.remove("active");
-         otherItem.querySelector(".accordion__content").style.maxHeight = 0;
+         otherItem.querySelector(".accordion__content").style.maxHeight = "0rem";
       });
 
       if (!isOpen) {
          item.classList.add("active");
-         content.style.maxHeight = content.scrollHeight + "px";
+         content.style.maxHeight = content.scrollHeight / 14 + "rem";
       }
    });
 });
+//========================================================================================================================================================

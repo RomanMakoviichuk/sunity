@@ -442,7 +442,11 @@ body {
 
 .benefits {
    min-height: 100vh;
-   margin-top: rem(190);
+   padding-top: rem(190);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 
    &__img {
       @media (max-width: $mobile) {

@@ -812,6 +812,9 @@
          align-self: center;
          width: auto;
       }
+      @media (max-width: rem(992)) {
+         width: 100%;
+      }
 
       &_title {
          @include adaptiveValue("font-size", 60, 40);
@@ -835,14 +838,16 @@
          justify-content: flex-start;
 
          .accordion__header {
+            padding-left: rem(40);
             display: flex;
             align-items: center;
             text-align: left;
+            position: relative;
          }
          .accordion__content {
             overflow: hidden;
             max-height: 0;
-            transition: max-height 1s ease;
+            transition: max-height 0.5s ease;
             p {
                text-align: left;
                display: none;
@@ -852,18 +857,23 @@
          ._icon-x {
             display: inline-block;
             vertical-align: middle;
-            padding-right: rem(24);
+            position: absolute;
+            left: 0;
             font-size: rem(16);
+            transition: transform 0.5s ease;
             color: #b4aea8;
          }
       }
       &_item.active {
          .accordion__content {
-            max-height: rem(200);
             p {
                display: block;
                padding-top: rem(20);
             }
+         }
+         ._icon-x {
+            transform: rotate(45deg);
+            transform-origin: center center;
          }
       }
       &_item:last-child {
