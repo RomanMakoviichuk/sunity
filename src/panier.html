@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"panier"
+})
+
+<body>
+	<section class="wrapper__panier">
+		<main class="panier">
+			<section class="header_v3">
+				<div class="header_v3__container">
+					<a href="#" class="header_v3__logo">
+						<img src="@img/logo.svg" alt="logo" />
+						<span>Sunity</span>
+					</a>
+					<div class="header_v3__acticles">
+						<h2 class="header_v3__acticles-title">Panier</h2>
+						<span class="header_v3__acticles-quantity">4 articles</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="orderSummary">
+				<div class="orderSummary__container">
+					<div class="productList">
+						<div class="productList__item">
+							<div class="item__image"></div>
+							<div class="item__description">
+								<h3 class="description__title"><strong>Kit solaire de démarrage</strong> à brancher<br> sur le
+									secteur.</h3>
+								<div class="description__body">
+									<div class="description__counter">Qté : <span>1</span>
+										<div class="_icon-x"></div>
+									</div>
+									<div class="description__summ">609,00 €</div>
+								</div>
+								<div class="description__footer">
+									<div class="description__footer_items">
+										<div class="description__footer_items-item">
+											<div class="_icon-stopwatch"></div>
+											<span>Installation <br>en 10mins</span>
+										</div>
+										<div class="description__footer_items-item">
+											<div class="_icon-security"></div>
+											<span>Garantie 10 ans</span>
+										</div>
+									</div>
+									<button class="description__footer_button" type="button"
+										onclick="removeItem()">Supprimer</button>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="productList__item">
+							<div class="item__image"></div>
+							<div class="item__description">
+								<h3 class="description__title"><strong>Kit solaire de démarrage</strong> à brancher<br> sur le
+									secteur.</h3>
+								<div class="description__body">
+									<div class="description__counter">Qté : <span>1</span>
+										<div class="_icon-x"></div>
+									</div>
+									<div class="description__summ">519,00 €</div>
+								</div>
+								<div class="description__footer">
+									<div class="description__footer_items">
+										<div class="description__footer_items-item">
+											<div class="_icon-stopwatch"></div>
+											<span>Installation <br>en 10mins</span>
+										</div>
+										<div class="description__footer_items-item">
+											<div class="_icon-security"></div>
+											<span>Garantie 10 ans</span>
+										</div>
+									</div>
+									<button class="description__footer_button" type="button"
+										onclick="removeItem()">Supprimer</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="productList__item">
+							<div class="item__image"></div>
+							<div class="item__description">
+								<h3 class="description__title"><strong>Kit solaire de démarrage</strong> à brancher<br> sur le
+									secteur.</h3>
+								<div class="description__body">
+									<div class="description__counter">Qté : <span>1</span>
+										<div class="_icon-x"></div>
+									</div>
+									<div class="description__summ">30,00 €</div>
+								</div>
+								<div class="description__footer">
+									<div class="description__footer_items">
+										<div class="description__footer_items-item">
+											<div class="_icon-stopwatch"></div>
+											<span>Installation <br>en 10mins</span>
+										</div>
+										<div class="description__footer_items-item">
+											<div class="_icon-security"></div>
+											<span>Garantie 10 ans</span>
+										</div>
+									</div>
+									<button class="description__footer_button" type="button"
+										onclick="removeItem()">Supprimer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="orderTotal">
+						<div class="orderTotal__wrapper">
+							<h2 class="orderTotal__title">Récapitulatif de la commande</h2>
+							<div class="orderTotal__body">
+								<div class="orderTotal__body_item">
+									<span>Sous-total</span>
+									<span>1374,00 €</span>
+								</div>
+								<div class="orderTotal__body_item">
+									<span>Frais de port</span>
+									<span>Gratuit</span>
+								</div>
+								<div class="orderTotal__body_item">
+									<span>TVA (20%)</span>
+									<span>Inclus</span>
+								</div>
+								<div class="orderTotal__body_item total-item">
+									<span>Total (TTC)</span>
+									<span>3144,00 €</span>
+								</div>
+							</div>
+							<button type="button" class="orderTotal__button btn">
+								<div class="_icon-plant"></div>
+								<span>Procéder au paiement</span>
+							</button>
+							<div class="orderTotal__conditions">
+								<p>En procédant au paiement, j’accepte les conditions générales de vente et d’utilisation de
+									Sunity.</p>
+							</div>
+							<div class="orderTotal__footer">
+								<div class="orderTotal__footer_item">
+									<div class="_icon-alma"></div>
+									<span>Payer en 3x ou <br> 4x sans frais</span>
+								</div>
+								<div class="orderTotal__footer_item">
+									<div class="_icon-delivery"></div>
+									<span>Livré en <br> 15 jours</span>
+								</div>
+							</div>
+						</div>
+						<div class="orderTotal__rate">
+							<span>Trustpilot</span><br>
+							<img src="@img/Stars.svg" alt="icon">
+							<p>Rated 4.6 / 5.0</p>
+						</div>
+					</div>
+				</div>
+				<div class="main__decor panier__decor sun">
+					<canvas class="canvas" id="main_canvas"></canvas>
+				</div>
+			</section>
+		</main>
+		</div>
+		@@include('html/_js.htm',{})
+</body>
+
+</html>
