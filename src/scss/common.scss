@@ -322,3 +322,20 @@
 .range__input::-webkit-slider-thumb:hover {
 	cursor: pointer;
 }
+
+//========================================================================================================================================================
+
+._icon_minus-container {
+	padding: rem(7) 0;
+	cursor: pointer;
+		}
+._icon-minus {
+	width: 14px;
+		height: 2px;
+		background: #000;
+		}
+._icon_minus-container:hover ._icon-minus {
+	background: $yellow;
+	transition: all 0.3s ease;
+}
+
