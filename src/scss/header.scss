@@ -3,7 +3,7 @@
 .icon-menu {
    display: none;
 
-   @media (max-width: $mobile) {
+   @media (max-width: $tablet) {
       display: block;
       position: relative;
       width: rem(12);
@@ -60,7 +60,7 @@
 }
 
 .button__wrapper {
-   @media (max-width: $mobile) {
+   @media (max-width: $tablet) {
       background-color: #fbf3ea;
       padding: rem(7.5) rem(6);
    }
@@ -115,7 +115,7 @@
    &__basket {
       display: none;
 
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
          display: block;
       }
    }
