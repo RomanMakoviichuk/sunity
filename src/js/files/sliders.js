@@ -180,6 +180,55 @@ function initSliders() {
          on: {},
       });
    }
+   if (document.querySelector(".sp_slider")) {
+      new Swiper(".sp_slider", {
+         modules: [Navigation, Pagination, Autoplay],
+         observer: true,
+         observeParents: true,
+         slidesPerView: "auto",
+         spaceBetween: 131,
+         autoHeight: false,
+         speed: 800,
+         loop: false,
+         preloadImages: true,
+         lazy: true,
+         autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+         },
+
+         pagination: {
+            el: ".swiper-pagination",
+            // clickable: true,
+            type: "progressbar",
+         },
+
+         // Брейкпоінти
+         breakpoints: {
+            320: {
+               slidesPerView: "auto",
+               spaceBetween: 30,
+               autoHeight: true,
+            },
+            640: {
+               spaceBetween: 40,
+               autoHeight: true,
+            },
+            768: {
+               spaceBetween: 60,
+            },
+            992: {
+               spaceBetween: 80,
+            },
+            1268: {
+               spaceBetween: 100,
+            },
+         },
+
+         // Події
+         on: {},
+      });
+   }
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
