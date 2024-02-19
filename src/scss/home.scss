@@ -1008,15 +1008,16 @@ body {
    justify-content: flex-end;
 
    &__container {
+		width: 100%;
       display: flex;
       justify-content: flex-end;
       position: relative;
-      margin: 0;
       :after {
          content: "";
          position: absolute;
          width: 100%;
          height: 100%;
+			bottom: 0;
          background: #1c1c1c;
          border-radius: rem(25) rem(25) 0 0;
          @include adaptiveValue("left", 178, 0);
@@ -1141,11 +1142,9 @@ body {
 
 //========================================================================================================================================================
 .solution {
-   min-height: 60vh;
+   min-height: rem(505);
    background: rgba(251, 243, 234, 0.4);
-
    backdrop-filter: blur(100px);
-
    &__container {
       display: flex;
       flex-direction: column;
