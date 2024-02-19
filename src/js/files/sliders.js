@@ -198,7 +198,7 @@ function initSliders() {
          },
 
          pagination: {
-            el: ".swiper-pagination",
+            el: ".sp_slider_pagination",
             // clickable: true,
             type: "progressbar",
          },
