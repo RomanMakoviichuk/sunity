@@ -519,25 +519,27 @@ accordionItems.forEach((item) => {
   });
 });
 //========================================================================================================================================================
-const countPluses = document.querySelectorAll("._icon-x");
+if (document.querySelector(".productList__item")) {
+  const countPluses = document.querySelectorAll("._icon-x");
 
-countPluses.forEach(function (countPlus) {
-  countPlus.addEventListener("click", function () {
-    const counter = countPlus
-      .closest(".description__body")
-      .querySelector(".description__counter span");
-    counter.textContent = parseInt(counter.textContent) + 1;
+  countPluses.forEach(function (countPlus) {
+    countPlus.addEventListener("click", function () {
+      const counter = countPlus
+        .closest(".description__body")
+        .querySelector(".description__counter span");
+      counter.textContent = parseInt(counter.textContent) + 1;
+    });
   });
-});
-const countMinuses = document.querySelectorAll("._icon_minus-container");
-countMinuses.forEach(function (countMinus) {
-  countMinus.addEventListener("click", function () {
-    const counter = countMinus
-      .closest(".description__body")
-      .querySelector(".description__counter span");
-    let currentValue = parseInt(counter.textContent);
-    if (currentValue > 1) {
-      counter.textContent = currentValue - 1;
-    }
+  const countMinuses = document.querySelectorAll("._icon_minus-container");
+  countMinuses.forEach(function (countMinus) {
+    countMinus.addEventListener("click", function () {
+      const counter = countMinus
+        .closest(".description__body")
+        .querySelector(".description__counter span");
+      let currentValue = parseInt(counter.textContent);
+      if (currentValue > 1) {
+        counter.textContent = currentValue - 1;
+      }
+    });
   });
-});
+}
