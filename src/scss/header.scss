@@ -149,7 +149,7 @@
 
    &__list {
       display: flex;
-      @include adaptiveValue("gap", 50, 20);
+      @include adaptiveValue("gap", 50, 0);
 
       > li:hover .sub-menu__list {
          display: block;

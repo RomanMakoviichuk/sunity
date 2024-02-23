@@ -519,6 +519,7 @@ accordionItems.forEach((item) => {
   });
 });
 //========================================================================================================================================================
+//product counter
 if (document.querySelector(".productList__item")) {
   const countPluses = document.querySelectorAll("._icon-x");
 
@@ -538,6 +539,28 @@ if (document.querySelector(".productList__item")) {
         .querySelector(".description__counter span");
       let currentValue = parseInt(counter.textContent);
       if (currentValue > 1) {
+        counter.textContent = currentValue - 1;
+      }
+    });
+  });
+}
+// Purchase counter
+if (document.querySelector(".extension__btn")) {
+  const incrementButtons = document.querySelectorAll(".increment");
+  const decrementButtons = document.querySelectorAll(".decrement");
+
+  incrementButtons.forEach(function (incrementButton) {
+    incrementButton.addEventListener("click", function () {
+      const counter = incrementButton.parentElement.querySelector("span");
+      counter.textContent = parseInt(counter.textContent) + 1;
+    });
+  });
+
+  decrementButtons.forEach(function (decrementButton) {
+    decrementButton.addEventListener("click", function () {
+      const counter = decrementButton.parentElement.querySelector("span");
+      let currentValue = parseInt(counter.textContent);
+      if (currentValue > 0) {
         counter.textContent = currentValue - 1;
       }
     });

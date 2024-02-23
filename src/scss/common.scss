@@ -339,3 +339,82 @@
 	transition: all 0.3s ease;
 }
 
+//========================================================================================================================================================
+.extension {
+	&__btn {
+		border-radius: 37px;
+		background: #EDEDED;
+		display: flex;
+		align-items: center;
+		gap: rem(23);
+		font-size: rem(20);
+		font-weight: 500;
+		padding: rem(9) rem(14);
+		cursor: pointer;
+		._icon-x {
+			font-size: rem(15);
+		}
+	}
+	&__price {
+		display: flex;
+		flex-direction: column;
+		gap: rem(4);
+		font-size: rem(15);
+		:not(:last-child) {
+			font-weight: 700;
+		}
+	}
+}
+
+.load {
+
+	&__info {
+		border-radius: 8px;
+      border: 1px solid #E8E8E8;
+      background: #FFF;
+		padding: rem(21) rem(24);
+		span {
+			font-weight: 700;
+			padding-right: rem(16);
+		}
+	}
+
+	&__btn {
+		border-radius: 8px;
+      border: 1px solid $mainColor;
+      background: #FFF;
+		padding: rem(21) rem(24);
+		span {
+			font-weight: 700;
+		}
+	}
+}
+
+.accessories__item_last {
+	.accessories__item_title {
+	 p {
+		padding-left: 0;
+	 }
+}}
+
+//========================================================================================================================================================
+.decrement {
+	height: rem(20);
+	width: rem(15);
+	display: flex;
+	align-items: center;
+
+	&:hover ._icon-minus {
+		background: #FFD51C;
+		transition: 0.3s ease;
+	}
+}
+
+.increment:hover ._icon-x {
+    color: $yellow;
+	 transition: 0.3s ease;
+}
+.increment {
+	width: rem(15);
+	height: rem(15);
+}
