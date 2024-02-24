@@ -203,10 +203,6 @@
 .calculator__wrapper {
    position: relative;
 }
-.calculator_products {
-   margin: rem(72) 0 rem(60) 0;
-   flex-grow: 1;
-}
 
 .calc {
    &__title {
@@ -268,6 +264,39 @@
 }
 
 //======================== calc products ==========================================================================================
+.decor__content {
+   padding-top: 157px;
+   opacity: 0;
+   transition: all 0.3s ease;
+}
+.decor__text {
+   position: relative;
+   left: -18px;
+   color: #000;
+   text-align: center;
+   font-family: Brockmann;
+   font-size: 25px;
+   font-style: normal;
+   font-weight: 600;
+   max-width: 525px;
+}
+.eyes__opened {
+   margin-top: 61px;
+   margin-left: 73px;
+}
+.calc .decor__eyes.hide_pseudo:before,
+.calc .decor__eyes.hide_pseudo:after {
+   opacity: 0;
+}
+
+.calculator_products {
+   margin: rem(72) 0 rem(60) 0;
+   flex-grow: 1;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.4s ease;
+   height: 0px;
+}
 
 .calculator_products h2 {
    font-size: 35px;
