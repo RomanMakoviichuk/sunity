@@ -266,3 +266,127 @@
 .wrapper_calc > .footer > .footer__btn {
    display: none;
 }
+
+//======================== calc products ==========================================================================================
+
+.calculator_products h2 {
+   font-size: 35px;
+   font-style: normal;
+   font-weight: 600;
+   margin-bottom: 30px;
+}
+.calc_best_match {
+   margin-bottom: 86px;
+}
+.all_products_list {
+   display: grid;
+   gap: 25px;
+}
+.calc_product_item {
+   border-radius: 18px;
+   border: 1px solid #d4d4d4;
+   background: #fff;
+   padding: 15px 20px 17px;
+   .btn {
+      width: auto;
+   }
+}
+.calc_product_grid {
+   display: grid;
+   grid-template-columns: 373px 1fr;
+   gap: 25px;
+}
+.calc_product_head {
+   border-bottom: 1px solid #f0f0f0;
+   padding-bottom: 15px;
+   margin-bottom: 13px;
+
+   ._1 {
+      padding-right: 60px;
+   }
+}
+.text_15_700 {
+   font-size: 15px;
+   font-weight: 700;
+}
+.flex_between {
+   display: flex;
+   justify-content: space-between;
+}
+.flex_end {
+   display: flex;
+   justify-content: flex-end;
+}
+.gap_35 {
+   gap: 35px;
+}
+.mb-5 {
+   margin-bottom: 5px;
+}
+.text_12_400 {
+   font-size: 12px;
+   font-weight: 400;
+}
+.compared_price {
+   text-decoration: line-through;
+}
+.vertical_center {
+   display: flex;
+   align-items: center;
+}
+.calc_product_image {
+   height: 141px;
+   border-radius: 8px;
+}
+.calc_product_content {
+   padding: 35px 38px;
+   border-radius: 8px;
+   background: #f4f4f4;
+}
+.calc_product_text {
+   max-width: 368px;
+}
+.tablet_show,
+.tablet_show_flex {
+   display: none;
+}
+
+@media screen and (max-width: 767px) {
+   .tablet_hide {
+      display: none;
+   }
+   .tablet_show {
+      display: block;
+   }
+   .tablet_show_flex {
+      display: flex;
+   }
+
+   .calc_product_grid {
+      grid-template-columns: 1fr;
+   }
+   .calc_product_head.calc_product_grid {
+      display: flex;
+      justify-content: space-around;
+   }
+   .calc_product_head ._1 {
+      width: 100%;
+      padding-right: 0px;
+   }
+   .calc_product_image {
+      width: 100%;
+      object-fit: cover;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+   }
+   .calc_product_main.calc_product_grid {
+      gap: 0;
+   }
+   .calc_product_content {
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+   }
+   .calc_product_content {
+      margin-bottom: 22px;
+   }
+}
