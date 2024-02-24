@@ -1,198 +1,238 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"Calc"
-})
+   @@include('html/_head.htm',{ "title":"Calc" })
 
-<body>
-	<div class="wrapper wrapper_calc">
-		@@include('html/_header.htm',{})
-		<main class="calc__page">
-			<div class="calc__decor">
-				<div class="decor__eyes eye__opened "></div>
-			</div>
-			<div class="calc__container">
-				<div class="calc__nav">
-					<h2 class="nav__title">
-						Kit Solaire double face
-					</h2>
-					<div class="nav__switch">
-						<a href="#" class="nav__switch_mode">Présentation</a>
-						<a href="#" class="nav__switch_mode active-tab">Calculer mes économies</a>
-						<a href="#" class="nav__switch_mode">Caractéristiques</a>
-						<div class="nav__switch_rate ">
-							<div class="_icon-stars"></div>
-							<span>4.8/5</span>
-						</div>
-					</div>
-					<a href="#" class="nav__btn btn">
-						<div class="nav__btn-header header-btn">
-							<p>Acheter</p>
-							<div class="_icon-arrow-r"></div>
-						</div>
-						<span>669€ - Livraison gratuite</span>
-					</a>
-				</div>
+   <body>
+      <div class="wrapper wrapper_calc">
+         @@include('html/_header.htm',{})
+         <main class="calc__page">
+            <div class="calc__decor">
+               <div class="decor__eyes eye__opened"></div>
+            </div>
+            <div class="calc__container">
+               <div class="calc__nav">
+                  <h2 class="nav__title">Kit Solaire double face</h2>
+                  <div class="nav__switch">
+                     <a href="#" class="nav__switch_mode">Présentation</a>
+                     <a href="#" class="nav__switch_mode active-tab">Calculer mes économies</a>
+                     <a href="#" class="nav__switch_mode">Caractéristiques</a>
+                     <div class="nav__switch_rate">
+                        <div class="_icon-stars"></div>
+                        <span>4.8/5</span>
+                     </div>
+                  </div>
+                  <a href="#" class="nav__btn btn">
+                     <div class="nav__btn-header header-btn">
+                        <p>Acheter</p>
+                        <div class="_icon-arrow-r"></div>
+                     </div>
+                     <span>669€ - Livraison gratuite</span>
+                  </a>
+               </div>
+               <div class="calculator__wrapper">
+                  <div class="calculator">
+                     <h2 class="calc__title">Où habitez-vous ?</h2>
+                     <div class="calc__subtitle">
+                        <div class="_icon-info"></div>
+                        <p>
+                           Votre capacité de production dépendra du niveau d’ensoleillement de votre
+                           région.
+                        </p>
+                     </div>
+                     <input class="form-field" type="text" placeholder="Code postal" />
+                     <div class="calc__switch">
+                        <h2 class="calc__title">Batterie</h2>
+                        <input type="checkbox" id="switch" /><label for="switch"></label>
+                     </div>
+                     <div class="calc__subtitle">
+                        <div class="_icon-info"></div>
+                        <p>
+                           En ajoutant une batterie vous augmentez votre capacité
+                           d’auto-consommation
+                        </p>
+                     </div>
+                     <h2 class="calc__title">
+                        Quelle est le montant de votre facture énergétique mensuelle ?
+                     </h2>
 
-				<div class="calculator">
-					<h2 class="calc__title">Où habitez-vous ?</h2>
-					<div class="calc__subtitle">
-						<div class="_icon-info"></div>
-						<p>Votre capacité de production dépendra du niveau d’ensoleillement de votre région.</p>
-					</div>
-					<input class="form-field" type="text" placeholder="Code postal">
-					<div class="calc__switch">
-						<h2 class="calc__title">Batterie</h2>
-						<input type="checkbox" id="switch" /><label for="switch"></label>
-					</div>
-					<div class="calc__subtitle">
-						<div class="_icon-info"></div>
-						<p>En ajoutant une batterie vous augmentez votre capacité d’auto-consommation</p>
-					</div>
-					<h2 class="calc__title">Quelle est le montant de votre facture énergétique mensuelle ?</h2>
+                     <div class="range">
+                        <div class="range__content">
+                           <div class="range__slider">
+                              <div class="range__slider-line" id="range-line"></div>
+                           </div>
+                           <div class="range__thumb" id="range-thumb">
+                              <div class="range__value">
+                                 <span class="range__value-number" id="range-number">1</span>
+                              </div>
+                           </div>
+                           <input
+                              type="range"
+                              class="range__input"
+                              id="range-input"
+                              min="0"
+                              max="500"
+                              value="1"
+                              step="1"
+                           />
+                        </div>
+                     </div>
+                     <a class="calc__btn btn">Calculer</a>
+                  </div>
+               </div>
+            </div>
 
-					<div class="range">
-						<div class="range__content">
-							<div class="range__slider">
-								<div class="range__slider-line" id="range-line"></div>
-							</div>
-							<div class="range__thumb" id="range-thumb">
-								<div class="range__value">
-									<span class="range__value-number" id="range-number">1</span>
-								</div>
-							</div>
-							<input type="range" class="range__input" id="range-input" min="0" max="500" value="1" step="1">
-						</div>
-					</div>
-					<a class="calc__btn btn">Calculer</a>
-				</div>
-			</div>
+            <section class="questions">
+               <div class="questions__container">
+                  <div class="questions__wrapper">
+                     <div class="questions__content">
+                        <h2 class="questions__content_title">
+                           Vous avez encore <span>1000 questions</span> ?
+                        </h2>
+                        <div class="questions__content_subtitle">
+                           Faites-vous rappeler par un de nos experts ou consulter notre centre
+                           aide.
+                        </div>
+                        <a href="#" class="questions__content_link">
+                           <span>Notre centre d’aide</span>
+                           <div class="_icon-arrow-r"></div>
+                        </a>
+                        <a href="#" class="questions__btn btn">
+                           <div class="questions__btn-header header-btn">
+                              <p>Prendre rendez-vous</p>
+                              <div class="_icon-arrow-r"></div>
+                           </div>
+                           <span>Nos experts sont disponibles</span>
+                        </a>
+                     </div>
+                     <div class="questions__card">CALENDLY</div>
+                  </div>
+               </div>
+               <div class="questions__decor sun">
+                  <canvas class="canvas" id="calc_canvas"></canvas>
+               </div>
+            </section>
 
-			<section class="questions">
-				<div class="questions__container">
-					<div class="questions__wrapper">
-						<div class="questions__content">
-							<h2 class="questions__content_title">Vous avez encore <span>1000 questions</span> ?</h2>
-							<div class="questions__content_subtitle">Faites-vous rappeler par un de nos experts ou consulter
-								notre
-								centre aide.</div>
-							<a href="#" class="questions__content_link">
-								<span>Notre centre d’aide</span>
-								<div class="_icon-arrow-r"></div>
-							</a>
-							<a href="#" class="questions__btn btn">
-								<div class="questions__btn-header header-btn">
-									<p>Prendre rendez-vous</p>
-									<div class="_icon-arrow-r"></div>
-								</div>
-								<span>Nos experts sont disponibles</span>
-							</a>
-						</div>
-						<div class="questions__card">CALENDLY</div>
-					</div>
-				</div>
-				<div class="questions__decor sun">
-					<canvas class="canvas" id="calc_canvas"></canvas>
-				</div>
-			</section>
+            <section class="solution">
+               <div class="solution__container">
+                  <div class="solution__header">
+                     <h2 class="solution__header_title">
+                        Sunity, source inépuisable de solutions.
+                     </h2>
+                     <div class="solution__header_evaluation">
+                        <span>Excellent</span>
+                        <img src="@img/solution/stars.svg" alt="icon" />
+                        <div class="_icon-star"></div>
+                        <span>Trustpilot</span>
+                     </div>
+                  </div>
+                  <div class="solution__items">
+                     <div class="solution__item">
+                        <h3 class="solution__item_title">Kit solaire sur prise</h3>
+                        <p>La solution la plus simple et facile pour produire votre éléctricité.</p>
+                        <a href="#" class="solution__item_link"
+                           ><span>Découvrir le kit</span>
+                           <div class="_icon-arrow-r"></div>
+                        </a>
+                     </div>
+                     <div class="solution__item">
+                        <h3 class="solution__item_title">App mobile</h3>
+                        <p>
+                           Notre app va vous permettre d’aller encore plus loin dans vos économies
+                           d’énergie.
+                        </p>
+                        <a href="#" class="solution__item_link"
+                           ><span>Télécharger l’app</span>
+                           <div class="_icon-arrow-r"></div>
+                        </a>
+                     </div>
+                     <div class="solution__item">
+                        <h3 class="solution__item_title">Batterie</h3>
+                        <p>Profitez tout le temps de votre propre éléctricité... même la nuit !</p>
+                        <a href="#" class="solution__item_link"
+                           ><span>En savoir plus</span>
+                           <div class="_icon-arrow-r"></div>
+                        </a>
+                     </div>
+                     <div class="solution__item">
+                        <h3 class="solution__item_title">Installation toît</h3>
+                        <p>
+                           Nos équipes peuvent aussi se déplacer chez vous pour équiper votre toît.
+                        </p>
+                        <a href="#" class="solution__item_link"
+                           ><span>Service d’installation</span>
+                           <div class="_icon-arrow-r"></div>
+                        </a>
+                     </div>
+                  </div>
 
-			<section class="solution">
-				<div class="solution__container">
-					<div class="solution__header">
-						<h2 class="solution__header_title">Sunity, source inépuisable de solutions.</h2>
-						<div class="solution__header_evaluation">
-							<span>Excellent</span>
-							<img src="@img/solution/stars.svg" alt="icon">
-							<div class="_icon-star"></div>
-							<span>Trustpilot</span>
-						</div>
-					</div>
-					<div class="solution__items">
-						<div class="solution__item">
-							<h3 class="solution__item_title">Kit solaire sur prise</h3>
-							<p>La solution la plus simple et facile pour produire votre éléctricité.</p>
-							<a href="#" class="solution__item_link"><span>Découvrir le kit</span>
-								<div class="_icon-arrow-r"></div>
-							</a>
-						</div>
-						<div class="solution__item">
-							<h3 class="solution__item_title">App mobile</h3>
-							<p>Notre app va vous permettre d’aller encore plus loin dans vos économies d’énergie.</p>
-							<a href="#" class="solution__item_link"><span>Télécharger l’app</span>
-								<div class="_icon-arrow-r"></div>
-							</a>
-						</div>
-						<div class="solution__item">
-							<h3 class="solution__item_title">Batterie</h3>
-							<p>Profitez tout le temps de votre propre éléctricité... même la nuit !</p>
-							<a href="#" class="solution__item_link"><span>En savoir plus</span>
-								<div class="_icon-arrow-r"></div>
-							</a>
-						</div>
-						<div class="solution__item">
-							<h3 class="solution__item_title">Installation toît</h3>
-							<p>Nos équipes peuvent aussi se déplacer chez vous pour équiper votre toît.</p>
-							<a href="#" class="solution__item_link"><span>Service d’installation</span>
-								<div class="_icon-arrow-r"></div>
-							</a>
-						</div>
-					</div>
+                  <div class="solution__slider swiper">
+                     <div class="solution__wrapper swiper-wrapper">
+                        <div class="solution__slide swiper-slide">
+                           <div class="solution__item">
+                              <h3 class="solution__item_title">Kit solaire sur prise</h3>
+                              <p>
+                                 La solution la plus simple et facile pour produire votre
+                                 éléctricité.
+                              </p>
+                              <a href="#" class="solution__item_link"
+                                 ><span>Découvrir le kit</span>
+                                 <div class="_icon-arrow-r"></div>
+                              </a>
+                           </div>
+                        </div>
 
+                        <div class="solution__slide swiper-slide">
+                           <div class="solution__item">
+                              <h3 class="solution__item_title">App mobile</h3>
+                              <p>
+                                 Notre app va vous permettre d’aller encore plus loin dans vos
+                                 économies d’énergie.
+                              </p>
+                              <a href="#" class="solution__item_link"
+                                 ><span>Télécharger l’app</span>
+                                 <div class="_icon-arrow-r"></div>
+                              </a>
+                           </div>
+                        </div>
 
-					<div class="solution__slider swiper">
-						<div class="solution__wrapper swiper-wrapper">
-							<div class="solution__slide swiper-slide">
-								<div class="solution__item">
-									<h3 class="solution__item_title">Kit solaire sur prise</h3>
-									<p>La solution la plus simple et facile pour produire votre éléctricité.</p>
-									<a href="#" class="solution__item_link"><span>Découvrir le kit</span>
-										<div class="_icon-arrow-r"></div>
-									</a>
-								</div>
-							</div>
+                        <div class="solution__slide swiper-slide">
+                           <div class="solution__item">
+                              <h3 class="solution__item_title">Batterie</h3>
+                              <p>
+                                 Profitez tout le temps de votre propre éléctricité... même la nuit
+                                 !
+                              </p>
+                              <a href="#" class="solution__item_link"
+                                 ><span>En savoir plus</span>
+                                 <div class="_icon-arrow-r"></div>
+                              </a>
+                           </div>
+                        </div>
 
-							<div class="solution__slide swiper-slide">
-								<div class="solution__item">
-									<h3 class="solution__item_title">App mobile</h3>
-									<p>Notre app va vous permettre d’aller encore plus loin dans vos économies d’énergie.</p>
-									<a href="#" class="solution__item_link"><span>Télécharger l’app</span>
-										<div class="_icon-arrow-r"></div>
-									</a>
-								</div>
-							</div>
-
-							<div class="solution__slide swiper-slide">
-								<div class="solution__item">
-									<h3 class="solution__item_title">Batterie</h3>
-									<p>Profitez tout le temps de votre propre éléctricité... même la nuit !</p>
-									<a href="#" class="solution__item_link"><span>En savoir plus</span>
-										<div class="_icon-arrow-r"></div>
-									</a>
-								</div>
-							</div>
-
-							<div class="solution__slide swiper-slide">
-								<div class="solution__item">
-									<h3 class="solution__item_title">Installation toît</h3>
-									<p>Nos équipes peuvent aussi se déplacer chez vous pour équiper votre toît.</p>
-									<a href="#" class="solution__item_link"><span>Service d’installation</span>
-										<div class="_icon-arrow-r"></div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-pagination solution__pagination"></div>
-					</div>
-				</div>
-			</section>
-		</main>
-		@@include('html/_footer.htm',{})
-		<div class="calc__footer">
-			<a class="calc__btn btn">Calculer</a>
-		</div>
-
-	</div>
-	@@include('html/_js.htm',{})
-</body>
-
+                        <div class="solution__slide swiper-slide">
+                           <div class="solution__item">
+                              <h3 class="solution__item_title">Installation toît</h3>
+                              <p>
+                                 Nos équipes peuvent aussi se déplacer chez vous pour équiper votre
+                                 toît.
+                              </p>
+                              <a href="#" class="solution__item_link"
+                                 ><span>Service d’installation</span>
+                                 <div class="_icon-arrow-r"></div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination solution__pagination"></div>
+                  </div>
+               </div>
+            </section>
+         </main>
+         @@include('html/_footer.htm',{})
+         <div class="calc__footer">
+            <a class="calc__btn btn">Calculer</a>
+         </div>
+      </div>
+      @@include('html/_js.htm',{})
+   </body>
 </html>
