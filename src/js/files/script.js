@@ -520,49 +520,49 @@ accordionItems.forEach((item) => {
 });
 //========================================================================================================================================================
 //product counter
-if (document.querySelector(".productList__item")) {
-  const countPluses = document.querySelectorAll("._icon-x");
+// if (document.querySelector(".productList__item")) {
+//   const countPluses = document.querySelectorAll("._icon-x");
 
-  countPluses.forEach(function (countPlus) {
-    countPlus.addEventListener("click", function () {
-      const counter = countPlus
-        .closest(".description__body")
-        .querySelector(".description__counter span");
-      counter.textContent = parseInt(counter.textContent) + 1;
-    });
-  });
-  const countMinuses = document.querySelectorAll("._icon_minus-container");
-  countMinuses.forEach(function (countMinus) {
-    countMinus.addEventListener("click", function () {
-      const counter = countMinus
-        .closest(".description__body")
-        .querySelector(".description__counter span");
-      let currentValue = parseInt(counter.textContent);
-      if (currentValue > 1) {
-        counter.textContent = currentValue - 1;
-      }
-    });
-  });
-}
-// Purchase counter
-if (document.querySelector(".extension__btn")) {
-  const incrementButtons = document.querySelectorAll(".increment");
-  const decrementButtons = document.querySelectorAll(".decrement");
+//   countPluses.forEach(function (countPlus) {
+//     countPlus.addEventListener("click", function () {
+//       const counter = countPlus
+//         .closest(".description__body")
+//         .querySelector(".description__counter span");
+//       counter.textContent = parseInt(counter.textContent) + 1;
+//     });
+//   });
+//   const countMinuses = document.querySelectorAll("._icon_minus-container");
+//   countMinuses.forEach(function (countMinus) {
+//     countMinus.addEventListener("click", function () {
+//       const counter = countMinus
+//         .closest(".description__body")
+//         .querySelector(".description__counter span");
+//       let currentValue = parseInt(counter.textContent);
+//       if (currentValue > 1) {
+//         counter.textContent = currentValue - 1;
+//       }
+//     });
+//   });
+// }
+// // Purchase counter
+// if (document.querySelector(".extension__btn")) {
+//   const incrementButtons = document.querySelectorAll(".increment");
+//   const decrementButtons = document.querySelectorAll(".decrement");
 
-  incrementButtons.forEach(function (incrementButton) {
-    incrementButton.addEventListener("click", function () {
-      const counter = incrementButton.parentElement.querySelector("span");
-      counter.textContent = parseInt(counter.textContent) + 1;
-    });
-  });
+//   incrementButtons.forEach(function (incrementButton) {
+//     incrementButton.addEventListener("click", function () {
+//       const counter = incrementButton.parentElement.querySelector("span");
+//       counter.textContent = parseInt(counter.textContent) + 1;
+//     });
+//   });
 
-  decrementButtons.forEach(function (decrementButton) {
-    decrementButton.addEventListener("click", function () {
-      const counter = decrementButton.parentElement.querySelector("span");
-      let currentValue = parseInt(counter.textContent);
-      if (currentValue > 0) {
-        counter.textContent = currentValue - 1;
-      }
-    });
-  });
-}
+//   decrementButtons.forEach(function (decrementButton) {
+//     decrementButton.addEventListener("click", function () {
+//       const counter = decrementButton.parentElement.querySelector("span");
+//       let currentValue = parseInt(counter.textContent);
+//       if (currentValue > 0) {
+//         counter.textContent = currentValue - 1;
+//       }
+//     });
+//   });
+// }
