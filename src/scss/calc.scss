@@ -269,6 +269,24 @@
    opacity: 0;
    transition: all 0.3s ease;
 }
+.calc_product_item.active {
+   border: 2px solid #1c1c1c;
+}
+.calc_product_item.active .calc_product_badge {
+   display: block;
+}
+.relative {
+   position: relative;
+}
+.calc_product_badge {
+   border-radius: 8px;
+   background: #ffd51c;
+   padding: 3px 8px 4px 8px;
+   position: absolute;
+   top: 7px;
+   left: 7px;
+   display: none;
+}
 .decor__text {
    position: relative;
    left: -18px;
