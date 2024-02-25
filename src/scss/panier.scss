@@ -91,6 +91,7 @@
 }
 .item {
    &__image {
+      overflow: hidden;
       background: #d9d9d9;
       min-height: rem(105);
       min-width: rem(104);
