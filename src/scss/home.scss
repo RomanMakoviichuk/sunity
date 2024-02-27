@@ -10,9 +10,12 @@ body {
       align-items: center;
       justify-content: space-around;
       position: relative;
+      padding-top: 50px;
+
       @include adaptiveValue("gap", 50, 20);
 
       @media (max-width: $tablet) {
+         padding-top: 70px;
          flex-direction: column;
       }
    }
@@ -35,12 +38,13 @@ body {
    &__slider-wrapper {
       width: 93%;
       margin-bottom: 0;
+      height: calc(100vh - 160px);
 
       @media (max-width: $tablet) {
          width: 100%;
+         height: calc(75vh - 70px);
       }
 
-      @include adaptiveValue("height", 638, 522);
       display: flex;
       justify-content: center;
       align-items: flex-end;
@@ -105,10 +109,11 @@ body {
       flex-direction: column;
       align-items: center;
       gap: rem(15);
-      @include adaptiveValue("margin-top", 121, 126);
+      padding-top: 50px;
 
       @media (max-width: $tablet) {
          padding-bottom: rem(204);
+         padding-top: 70px;
       }
    }
 
@@ -169,6 +174,7 @@ body {
       display: flex;
       justify-content: space-around;
       padding: rem(50) 0;
+      max-width: rem(1047);
       align-items: center;
       font-size: rem(16);
       gap: rem(25);
@@ -417,6 +423,8 @@ body {
       display: flex;
       align-items: center;
       font-weight: 700;
+      position: relative;
+      z-index: 10;
 
       span {
          text-decoration-line: underline;
@@ -442,7 +450,6 @@ body {
 
 .benefits {
    min-height: 100vh;
-   margin-top: rem(190);
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -457,6 +464,7 @@ body {
    &__container {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: rem(110);
    }
 
@@ -506,12 +514,13 @@ body {
       }
    }
 }
+.benefits__content_title.title {
+   margin-top: 0;
+}
 
 //========================================================================================================================================================
 
 .testimonial {
-   margin-top: rem(175);
-
    &__wrapper {
       display: flex;
 
@@ -548,6 +557,7 @@ body {
       &_text {
          @include adaptiveValue("font-size", 30, 20);
          width: 90%;
+         max-width: rem(416);
          font-weight: 600;
 
          @media (max-width: $tablet) {
@@ -775,6 +785,7 @@ body {
             color: $mainColor;
             font-family: Roboto;
             font-weight: 700;
+            font-size: rem(14);
             line-height: rem(22);
             text-decoration-line: underline;
          }
@@ -789,6 +800,9 @@ body {
          font-weight: 500;
          line-height: rem(26);
          gap: rem(4);
+         span {
+            font-size: rem(16);
+         }
       }
 
       &_label ._icon-star {
@@ -930,9 +944,12 @@ body {
       flex-direction: column;
       padding-left: rem(70);
       justify-content: center;
+      max-width: rem(502);
+      margin-right: rem(102);
 
       @media (max-width: $tablet) {
          padding: 0;
+         margin-right: 0;
       }
 
       &_title {
@@ -1008,7 +1025,7 @@ body {
    justify-content: flex-end;
 
    &__container {
-		width: 100%;
+      width: 100%;
       display: flex;
       justify-content: flex-end;
       position: relative;
@@ -1017,7 +1034,7 @@ body {
          position: absolute;
          width: 100%;
          height: 100%;
-			bottom: 0;
+         bottom: 0;
          background: #1c1c1c;
          border-radius: rem(25) rem(25) 0 0;
          @include adaptiveValue("left", 178, 0);
@@ -1149,6 +1166,7 @@ body {
       display: flex;
       flex-direction: column;
       padding: rem(72) rem(70) rem(78) rem(70);
+      max-width: rem(1440);
 
       @media (max-width: $tablet) {
          width: 90%;
