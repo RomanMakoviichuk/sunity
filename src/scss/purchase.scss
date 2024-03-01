@@ -36,11 +36,11 @@
 
 .purchase {
    &__wrapper {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 320px;
       gap: rem(40);
       @media (max-width: em(992)) {
-         flex-direction: column;
-         align-items: center;
+         grid-template-columns: 1fr;
       }
    }
 
