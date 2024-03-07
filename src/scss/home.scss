@@ -974,6 +974,7 @@ body {
 
 .testmonial__slide_content-author > img {
    @include adaptiveValue("width", 60, 42);
+   border-radius: 50%;
 }
 
 .content-author {

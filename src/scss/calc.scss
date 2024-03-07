@@ -13,7 +13,7 @@
       background: rgba(0, 0, 0, 0.02);
 
       @media (max-width: em(624)) {
-         display: none;
+         visibility: hidden;
       }
    }
 
