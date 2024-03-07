@@ -86,6 +86,7 @@
    left: rem(130);
    width: 80%;
    @include adaptiveValue("gap", 20, 0);
+
    @media (max-width: em(767)) {
       flex-direction: row;
    }
@@ -96,6 +97,27 @@
       width: 100%;
    }
 }
+.features__slider-progress.progress-slider.home-progress {
+   top: rem(270);
+   width: rem(867);
+   span {
+      font-size: rem(20);
+      line-height: rem(24);
+      font-weight: 700;
+      top: -40px;
+   }
+   @media (max-width: em(767)) {
+      flex-direction: row;
+      gap: rem(30);
+   }
+   @media (max-width: em(600)) {
+      top: rem(240);
+      left: rem(0);
+      gap: rem(25);
+      width: rem(867);
+   }
+}
+
 .accessories {
    &__mobile-block {
       display: none;

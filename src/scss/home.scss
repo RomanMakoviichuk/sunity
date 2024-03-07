@@ -15,7 +15,7 @@ body {
       @include adaptiveValue("gap", 50, 20);
 
       @media (max-width: $tablet) {
-         padding-top: 70px;
+         padding-top: 75px;
          flex-direction: column;
       }
    }
@@ -88,6 +88,13 @@ body {
          font-weight: 600;
          line-height: normal;
       }
+      @media (max-width: $mobile) {
+         font-weight: 500;
+         width: 90%;
+         top: 85px !important;
+         font-weight: 600;
+         line-height: normal;
+      }
    }
 
    &__slider-progress {
@@ -123,8 +130,19 @@ body {
       gap: rem(25);
       color: $mainColor;
       text-align: center;
-      @include adaptiveValue("font-size", 44, 40);
+      font-size: rem(44);
       font-weight: 700;
+
+      h1 {
+         line-height: rem(40);
+      }
+
+      @media (max-width: $mobile) {
+         max-width: rem(300);
+      }
+   }
+   &__subtitle {
+      font-size: rem(16);
    }
 
    &__btn {
@@ -136,6 +154,20 @@ body {
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      font-size: rem(17);
+      font-weight: 700;
+   }
+}
+.home_sun {
+   @media (max-width: $mobile) {
+      right: rem(-200);
+      bottom: rem(-400) !important;
+   }
+   .canvas {
+      @media (max-width: $mobile) {
+         left: 17%;
+         top: 1%;
+      }
    }
 }
 
@@ -182,6 +214,7 @@ body {
       @media (max-width: $tablet) {
          flex-direction: column;
          gap: rem(58);
+         padding: rem(80) 0;
       }
    }
 
@@ -328,6 +361,11 @@ body {
          height: rem(660);
          margin-bottom: rem(202);
       }
+      @media (max-width: $mobile) {
+         display: block;
+         height: auto;
+         margin-bottom: rem(202);
+      }
    }
 }
 
@@ -438,6 +476,12 @@ body {
 
    @media (max-width: $tablet) {
       background-size: contain;
+   }
+   .item__title {
+      @media (max-width: $mobile) {
+         max-width: 260px;
+         padding-bottom: 26px;
+      }
    }
 }
 
@@ -556,7 +600,7 @@ body {
 
       &_text {
          @include adaptiveValue("font-size", 30, 20);
-         width: 90%;
+         width: 80%;
          max-width: rem(416);
          font-weight: 600;
 
@@ -666,13 +710,14 @@ body {
       padding: rem(15) rem(30);
       transition: all ease 0.3s;
       opacity: 0;
-      @include adaptiveValue("font-size", 40, 14);
+      font-size: rem(40);
       font-weight: 700;
       will-change: transform;
       will-change: opacity;
 
       @media (max-width: $tablet) {
-         padding: rem(5) rem(5);
+         font-size: rem(25);
+         line-height: 0.85;
       }
 
       &:nth-child(1) {
@@ -811,6 +856,27 @@ body {
       }
    }
 }
+@media (max-width: $tablet) {
+   .parallax__item._1 {
+      left: 5%;
+   }
+   .parallax__item._2 {
+      left: -29%;
+   }
+   .parallax__item._3 {
+      left: -10%;
+   }
+   .parallax__item._10 {
+      width: 300px;
+   }
+   .parallax__item._7 {
+      width: 170px;
+   }
+   .parallax__item._5 {
+      left: -11%;
+      top: 73%;
+   }
+}
 
 //========================================================================================================================================================
 .testmonial {
@@ -826,13 +892,16 @@ body {
 
       &_image {
          width: 50%;
-
+         border-radius: rem(15);
          @media (max-width: $tablet) {
             width: 100%;
+            height: 200px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            overflow: hidden;
          }
 
          img {
-            border-radius: rem(15);
             width: 100%;
             height: 100%;
          }
@@ -844,7 +913,7 @@ body {
 
       &_content {
          @include adaptiveValue("padding-top", 86, 42);
-         @include adaptiveValue("padding-left", 59, 16);
+         @include adaptiveValue("padding-left", 59, 14);
          @include adaptiveValue("padding-bottom", 59, 28);
          display: flex;
          flex-direction: column;
@@ -885,10 +954,13 @@ body {
          span {
             color: $yellow;
          }
+         @media (max-width: $tablet) {
+            gap: rem(8);
+         }
 
          > span:first-child {
             color: $yellow;
-            @include adaptiveValue("font-size", 40, 30);
+            @include adaptiveValue("font-size", 40, 28);
             font-style: normal;
             font-weight: 700;
             line-height: rem(22);
@@ -969,6 +1041,9 @@ body {
          @include adaptiveValue("font-size", 50, 30);
          font-weight: 700;
          margin: rem(15) 0 rem(42) 0;
+         @media (max-width: $tablet) {
+            max-width: 83%;
+         }
       }
 
       &_link {
@@ -1014,6 +1089,10 @@ body {
    &__item:last-child {
       border-bottom: none;
    }
+
+   @media screen and (max-width: 992px) {
+      margin-bottom: 120px;
+   }
 }
 
 //========================================================================================================================================================
@@ -1039,9 +1118,12 @@ body {
          border-radius: rem(25) rem(25) 0 0;
          @include adaptiveValue("left", 178, 0);
          z-index: -1;
-         @media (max-width: em(992)) {
-            left: 0;
+         @media (max-width: rem(992)) {
+            left: 0 !important;
          }
+      }
+      @media (max-width: rem(992)) {
+         padding: 0 35px;
       }
    }
 
@@ -1055,6 +1137,7 @@ body {
          flex-direction: column;
          align-items: center;
          width: 100%;
+         height: rem(600);
       }
    }
 
@@ -1068,6 +1151,9 @@ body {
 
          span {
             color: #ffd51c;
+         }
+         @media (max-width: rem(992)) {
+            font-size: 30px !important;
          }
       }
 
@@ -1129,7 +1215,8 @@ body {
       }
 
       @media (max-width: $tablet) {
-         left: rem(-120);
+         left: rem(-225);
+         bottom: rem(-360);
       }
    }
 
@@ -1169,8 +1256,8 @@ body {
       max-width: rem(1440);
 
       @media (max-width: $tablet) {
-         width: 90%;
-         padding: rem(72) rem(0) rem(78) rem(0);
+         width: 88%;
+         padding: rem(50) rem(0) rem(78) rem(0);
       }
    }
 
@@ -1209,6 +1296,11 @@ body {
          ._icon-star {
             font-size: rem(16);
             padding-right: rem(4);
+         }
+         @media (max-width: $tablet) {
+            flex-direction: column;
+            align-items: baseline;
+            gap: rem(4);
          }
       }
    }
@@ -1270,4 +1362,15 @@ body {
 .swiper-pagination-progressbar.solution__pagination {
    position: static;
    margin-top: rem(44);
+}
+.mob_hide {
+   @media (max-width: $mobile) {
+      display: none;
+   }
+}
+.mob_show {
+   display: none;
+   @media (max-width: $mobile) {
+      display: inline-block;
+   }
 }
