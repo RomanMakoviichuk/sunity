@@ -280,23 +280,6 @@
       }
    }
 }
-._icon-charge::after {
-   @media (max-width: $mobile) {
-      content: "";
-      width: rem(34);
-      height: rem(34);
-      border-radius: 50%;
-      background-color: #000;
-      background-image: url(../img/purchase/arrow-down.svg);
-      background-size: rem(16);
-      background-repeat: no-repeat;
-      background-position: center center;
-      cursor: pointer;
-      position: absolute;
-      right: 0;
-      top: 20%;
-   }
-}
 
 .extension__btn {
    width: rem(116);

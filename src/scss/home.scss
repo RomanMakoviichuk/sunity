@@ -78,7 +78,7 @@ body {
    &__slider-title {
       @include adaptiveValue("top", 165, 45);
       @include adaptiveValue("left", 41, 20);
-      @include adaptiveValue("width", 500, 280);
+      @include adaptiveValue("max-width", 500, 340);
       @include adaptiveValue("font-size", 60, 48);
       font-weight: 600;
 
@@ -529,6 +529,9 @@ body {
       }
 
       &_list {
+         @media (max-width: $tablet) {
+            padding-right: 20px;
+         }
       }
 
       &_list-item {

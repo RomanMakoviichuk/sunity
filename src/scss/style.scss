@@ -144,7 +144,7 @@ body {
          max-width: none;
 
          @if ($containerPadding>0 and $maxWidthContainer>0) {
-            padding: 0 rem(math.div($containerPadding, 2));
+            padding: 0 16px;
          }
       }
    }

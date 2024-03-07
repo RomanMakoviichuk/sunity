@@ -54,6 +54,7 @@ function slideShow2() {
       const nextProgress2 = progress2[nextIndex2];
       if (nextProgress2) {
          nextProgress2.classList.add("active");
+         if (!document.querySelector(".home-progress")) return;
          if (window.innerWidth < 768) {
             const dataIndex = nextProgress2.getAttribute("data-index");
             console.log("🚀 ~ slideShow2 ~ dataIndex:", dataIndex);

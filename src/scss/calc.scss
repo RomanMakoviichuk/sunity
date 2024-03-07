@@ -82,6 +82,13 @@
       .nav__btn.btn {
          height: rem(54);
          justify-content: center;
+
+         @media (max-width: em(992)) {
+            height: auto;
+            padding: 8px 10px;
+            font-size: 14px;
+            max-width: max-content;
+         }
       }
 
       @media (max-width: em(1328)) {
@@ -172,7 +179,6 @@
 
          @media (max-width: $tablet) {
             padding: rem(15);
-            width: rem(184);
          }
       }
 
