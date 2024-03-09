@@ -250,10 +250,6 @@
       align-self: flex-end;
       cursor: pointer;
       padding: rem(9) rem(20);
-
-      @media (max-width: $mobile) {
-         display: none;
-      }
    }
 }
 .last_title {

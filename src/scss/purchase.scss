@@ -100,7 +100,12 @@
 .features__slider-progress.progress-slider.home-progress {
    top: rem(270);
    width: rem(867);
+   .progress {
+      cursor: pointer;
+   }
    span {
+      padding-bottom: 20px;
+      width: 100%;
       font-size: rem(20);
       line-height: rem(24);
       font-weight: 700;

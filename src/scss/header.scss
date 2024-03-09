@@ -151,10 +151,6 @@
       display: flex;
       @include adaptiveValue("gap", 50, 0);
 
-      > li:hover .sub-menu__list {
-         display: block;
-      }
-
       @media (max-width: $mobile) {
          flex-direction: column;
          gap: rem(50) !important;
@@ -195,25 +191,33 @@
       display: none;
       z-index: 5;
       position: absolute;
-      background-color: #fbf3ea;
       top: rem(19);
       left: rem(-10);
-      padding: rem(10) rem(10);
-      width: rem(150);
-      border-radius: rem(12);
-      border: 1px solid $mainColor;
+      padding: rem(23) rem(18);
+      width: rem(239);
+      border-radius: 8px;
+      color: #1c1c1c;
+      background: #fff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 
       a {
-         font-size: rem(14);
+         font-size: rem(16);
          display: flex;
-         gap: rem(5);
+         gap: rem(13);
          align-items: center;
-         padding-bottom: rem(8);
       }
    }
 
    &__link {
    }
+}
+#HeaderMenu-contact[aria-expanded="true"]:before {
+   transform: rotateZ(180deg);
+}
+details[open] .sub-menu__list {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
 }
 
 @media (max-width: $tablet) {

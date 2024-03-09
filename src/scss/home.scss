@@ -8,11 +8,11 @@ body {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: flex-start;
       position: relative;
-      padding-top: 50px;
+      padding: 50px 0 0 0;
 
-      @include adaptiveValue("gap", 50, 20);
+      @include adaptiveValue("gap", 70, 20);
 
       @media (max-width: $tablet) {
          padding-top: 75px;
@@ -37,6 +37,7 @@ body {
 
    &__slider-wrapper {
       width: 93%;
+      max-width: rem(945);
       margin-bottom: 0;
       height: calc(100vh - 160px);
 
@@ -116,7 +117,6 @@ body {
       flex-direction: column;
       align-items: center;
       gap: rem(15);
-      padding-top: 50px;
 
       @media (max-width: $tablet) {
          padding-bottom: rem(204);
@@ -134,6 +134,7 @@ body {
       font-weight: 700;
 
       h1 {
+         max-width: rem(300);
          line-height: rem(40);
       }
 
@@ -159,11 +160,13 @@ body {
    }
 }
 .home_sun {
+   right: rem(-165);
    @media (max-width: $mobile) {
       right: rem(-200);
       bottom: rem(-400) !important;
    }
    .canvas {
+      top: 5.5%;
       @media (max-width: $mobile) {
          left: 17%;
          top: 1%;
@@ -348,6 +351,18 @@ body {
 
       span {
          text-decoration-line: underline;
+         transition: all ease 0.3s;
+      }
+      ._icon-arrow-black {
+         transition: all ease 0.4s;
+      }
+      &:hover {
+         span {
+            text-underline-offset: 3px;
+         }
+         ._icon-arrow-black {
+            transform: translateX(10px);
+         }
       }
    }
 
@@ -429,6 +444,9 @@ body {
       flex-direction: column;
       padding-top: rem(33);
       position: relative;
+      .item__title {
+         max-width: 400px;
+      }
 
       &__bg {
          position: absolute;
@@ -510,15 +528,10 @@ body {
       justify-content: center;
       align-items: center;
       gap: rem(110);
+      max-width: 1134px;
    }
 
    &__content {
-      width: 50%;
-
-      @media (max-width: $tablet) {
-         width: 100%;
-      }
-
       &_title {
          @include adaptiveValue("font-size", 50, 29);
          margin-bottom: rem(51);
@@ -647,14 +660,12 @@ body {
 .testimonial__parallax {
    min-width: 100vw;
    position: relative;
-   height: 200vh;
 }
 
 .parallax {
    &__body {
       overflow: hidden;
-      position: sticky;
-      top: 50px;
+      position: static;
       width: 100%;
       &__bg {
          width: 100%;
