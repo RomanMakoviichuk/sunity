@@ -114,6 +114,82 @@ function initSliders() {
          on: {},
       });
    }
+   if (document.querySelector(".testmonial__slider")) {
+      // Вказуємо склас потрібного слайдера
+      // Створюємо слайдер
+      new Swiper(".testmonial__slider", {
+         // Вказуємо склас потрібного слайдера
+         // Підключаємо модулі слайдера
+         // для конкретного випадку
+         modules: [Navigation, Pagination, Autoplay],
+         observer: true,
+         observeParents: true,
+         slidesPerView: 1,
+         spaceBetween: 67,
+         autoHeight: false,
+         speed: 800,
+
+         //touchRatio: 0,
+         //simulateTouch: false,
+         loop: false,
+         preloadImages: true,
+         lazy: true,
+         autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+         },
+
+         pagination: {
+            el: ".testmonial__slider .swiper-pagination",
+            // clickable: true,
+            type: "progressbar",
+         },
+
+         // Скроллбар
+         /*
+   		scrollbar: {
+   			el: '.swiper-scrollbar',
+   			draggable: true,
+   		},
+   		*/
+
+         // Кнопки "вліво/вправо"
+         navigation: {
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+         },
+
+         // Брейкпоінти
+         breakpoints: {
+            320: {
+               slidesPerView: 1,
+               spaceBetween: 20,
+               autoHeight: true,
+               width: 312,
+            },
+            640: {
+               slidesPerView: 1,
+               spaceBetween: 40,
+               autoHeight: true,
+            },
+            768: {
+               slidesPerView: 1,
+               spaceBetween: 20,
+            },
+            992: {
+               slidesPerView: 1,
+               spaceBetween: 20,
+            },
+            1268: {
+               slidesPerView: 1.2,
+               spaceBetween: 67,
+            },
+         },
+
+         // Події
+         on: {},
+      });
+   }
    if (document.querySelector(".services__slider.home-s-slider")) {
       new Swiper(".services__slider.home-s-slider", {
          // Вказуємо склас потрібного слайдера

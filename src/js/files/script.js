@@ -288,7 +288,8 @@ if (eye) {
 function initProductCircleLoading() {
    let svgCircleProgressPaths = document.querySelectorAll("[id^=svgCircleProgressPath]");
    let installStepsItems = document.querySelectorAll(".install__steps_item");
-   let duration = 5000;
+   let installStepsImages = document.querySelectorAll(".install__steps_image .slide");
+   let duration = 6000;
    let lengths = [];
 
    svgCircleProgressPaths.forEach(function (path, index) {
@@ -311,12 +312,14 @@ function initProductCircleLoading() {
             window.requestAnimationFrame(step);
          } else {
             installStepsItems[currentIndex].classList.remove("active");
+            installStepsImages[currentIndex].classList.remove("active");
             currentIndex++;
             if (currentIndex >= installStepsItems.length) {
                currentIndex = 0;
             }
             svgCircleProgressPaths[currentIndex].style.strokeDashoffset = lengths[currentIndex];
             installStepsItems[currentIndex].classList.add("active");
+            installStepsImages[currentIndex].classList.add("active");
             animateCircle(duration);
          }
       }
@@ -348,27 +351,27 @@ function parallaxAnimation() {
    let transformValues = {
       block1: { t1: 200, t2: 200, r: -25, main: 200 },
       block2: { t1: 180, t2: 140, r: 6, main: 180 },
-      block3: { t1: 160, t2: 0, r: 0, main: 160 },
-      block4: { t1: 80, t2: -80, r: 0, main: 80 },
-      block5: { t1: 120, t2: -120, r: 0, main: 120 },
-      block6: { t1: 0, t2: -150, r: 0, main: 150 },
-      block7: { t1: -120, t2: -120, r: 0, main: 120 },
-      block8: { t1: -160, t2: 0, r: 0, main: 160 },
-      block9: { t1: -170, t2: 170, r: 0, main: 170 },
-      block10: { t1: -190, t2: 190, r: 0, main: 190 },
+      block3: { t1: 160, t2: 0, r: -4, main: 160 },
+      block4: { t1: 80, t2: -80, r: -7, main: 80 },
+      block5: { t1: 120, t2: -120, r: 29, main: 120 },
+      block6: { t1: 0, t2: -150, r: -5, main: 150 },
+      block7: { t1: -120, t2: -120, r: -6, main: 120 },
+      block8: { t1: -160, t2: 0, r: -13, main: 160 },
+      block9: { t1: -170, t2: 170, r: -6, main: 170 },
+      block10: { t1: -190, t2: 190, r: 10, main: 190 },
    };
    if (window.innerWidth < 768) {
       transformValues = {
-         block1: { t1: 100, t2: 100, r: 0, main: 100 },
-         block2: { t1: 90, t2: 70, r: 0, main: 90 },
-         block3: { t1: 80, t2: 0, r: 0, main: 80 },
-         block4: { t1: 40, t2: -40, r: 0, main: 40 },
-         block5: { t1: 60, t2: -60, r: 0, main: 60 },
-         block6: { t1: 0, t2: -75, r: 0, main: 75 },
-         block7: { t1: -60, t2: -60, r: 0, main: 60 },
-         block8: { t1: -80, t2: 0, r: 0, main: 80 },
-         block9: { t1: -85, t2: 85, r: 0, main: 85 },
-         block10: { t1: -95, t2: 95, r: 0, main: 95 },
+         block1: { t1: 100, t2: 100, r: -25, main: 100 },
+         block2: { t1: 90, t2: 70, r: 6, main: 90 },
+         block3: { t1: 80, t2: 0, r: -4, main: 80 },
+         block4: { t1: 40, t2: -40, r: -7, main: 40 },
+         block5: { t1: 60, t2: -60, r: 29, main: 60 },
+         block6: { t1: 0, t2: -75, r: -5, main: 75 },
+         block7: { t1: -60, t2: -60, r: -6, main: 60 },
+         block8: { t1: -80, t2: 0, r: -13, main: 80 },
+         block9: { t1: -85, t2: 85, r: -6, main: 85 },
+         block10: { t1: -95, t2: 95, r: 10, main: 95 },
       };
    }
 
@@ -459,67 +462,90 @@ function parallaxAnimation() {
             break;
          case "block3":
             let position_3 = transformValues.block3.main - animateValue;
+            let rotateValue_3 = getRotateValue(transformValues.block3.r, animateValue);
             if (position_3 <= 0) {
-               setTransform(block3, `translate(0px, 0px) rotate(0deg)`);
+               setTransform(block3, `translate(0px, 0px) rotate(${rotateValue_3}deg)`);
                return;
             }
-            setTransform(block3, `translate(${position_3}px, 0px) rotate(0deg)`);
+            setTransform(block3, `translate(${position_3}px, 0px) rotate(${rotateValue_3}deg)`);
             break;
          case "block4":
             let position_4 = transformValues.block4.main - animateValue;
+            let rotateValue_4 = getRotateValue(transformValues.block4.r, animateValue);
             if (position_4 <= 0) {
-               setTransform(block4, `translate(0px, 0px) rotate(0deg)`);
+               setTransform(block4, `translate(0px, 0px) rotate(${rotateValue_4}deg)`);
                return;
             }
-            setTransform(block4, `translate(${position_4}px, -${position_4}px) rotate(0deg)`);
+            setTransform(
+               block4,
+               `translate(${position_4}px, -${position_4}px) rotate(${rotateValue_4}deg)`
+            );
             break;
          case "block5":
             let position_5 = transformValues.block5.main - animateValue;
+            let rotateValue_5 = getRotateValue(transformValues.block5.r, animateValue);
             if (position_5 <= 0) {
-               setTransform(block5, `translate(0px, 0px) rotate(0deg)`);
+               setTransform(block5, `translate(0px, 0px) rotate(${rotateValue_5}deg)`);
                return;
             }
-            setTransform(block5, `translate(${position_5}px, -${position_5}px) rotate(0deg)`);
+            setTransform(
+               block5,
+               `translate(${position_5}px, -${position_5}px) rotate(${rotateValue_5}deg)`
+            );
             break;
          case "block6":
             let position_6 = transformValues.block6.main - animateValue;
+            let rotateValue_6 = getRotateValue(transformValues.block6.r, animateValue);
             if (position_6 <= 0) {
-               setTransform(block6, `translate(0px, 0px) rotate(0deg)`);
+               setTransform(block6, `translate(0px, 0px) rotate(${rotateValue_6}deg)`);
                return;
             }
-            setTransform(block6, `translate(0px, -${position_6}px) rotate(0deg)`);
+            setTransform(block6, `translate(0px, -${position_6}px) rotate(${rotateValue_6}deg)`);
             break;
          case "block7":
             let position_7 = transformValues.block7.main - animateValue;
+            let rotateValue_7 = getRotateValue(transformValues.block7.r, animateValue);
             if (position_7 <= 0) {
-               setTransform(block7, `translate(0px, 0px) rotate(0deg)`);
+               setTransform(block7, `translate(0px, 0px) rotate(${rotateValue_7}deg)`);
                return;
             }
-            setTransform(block7, `translate(-${position_7}px, -${position_7}px) rotate(0deg)`);
+            setTransform(
+               block7,
+               `translate(-${position_7}px, -${position_7}px) rotate(${rotateValue_7}deg)`
+            );
             break;
          case "block8":
             let position_8 = transformValues.block8.main - animateValue;
+            let rotateValue_8 = getRotateValue(transformValues.block8.r, animateValue);
             if (position_8 <= 0) {
-               setTransform(block8, `translate(0px, 0px) rotate(0deg)`);
+               setTransform(block8, `translate(0px, 0px) rotate(${rotateValue_8}deg)`);
                return;
             }
-            setTransform(block8, `translate(-${position_8}px, 0px) rotate(0deg)`);
+            setTransform(block8, `translate(-${position_8}px, 0px) rotate(${rotateValue_8}deg)`);
             break;
          case "block9":
             let position_9 = transformValues.block9.main - animateValue;
+            let rotateValue_9 = getRotateValue(transformValues.block9.r, animateValue);
             if (position_9 <= 0) {
-               setTransform(block9, `translate(0px, 0px) rotate(0deg)`);
+               setTransform(block9, `translate(0px, 0px) rotate(${rotateValue_9}deg)`);
                return;
             }
-            setTransform(block9, `translate(-${position_9}px, ${position_9}px) rotate(0deg)`);
+            setTransform(
+               block9,
+               `translate(-${position_9}px, ${position_9}px) rotate(${rotateValue_9}deg)`
+            );
             break;
          case "block10":
             let position_10 = transformValues.block10.main - animateValue;
+            let rotateValue_10 = getRotateValue(transformValues.block10.r, animateValue);
             if (position_10 <= 0) {
-               setTransform(block10, `translate(0px, 0px) rotate(0deg)`);
+               setTransform(block10, `translate(0px, 0px) rotate(${rotateValue_10}deg)`);
                return;
             }
-            setTransform(block10, `translate(-${position_10}px, ${position_10}px) rotate(0deg)`);
+            setTransform(
+               block10,
+               `translate(-${position_10}px, ${position_10}px) rotate(${rotateValue_10}deg)`
+            );
             break;
          default:
             break;

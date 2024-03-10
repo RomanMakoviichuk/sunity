@@ -3,8 +3,21 @@
 .footer__item.copyright {
    min-width: rem(238);
 }
+.footer__item.copyright a {
+   text-decoration: underline;
+   text-underline-offset: 2px;
+}
+.footer__item.copyright a:hover {
+   opacity: 0.9;
+}
 .footer__item.newsletter {
    width: rem(257);
+}
+.footer__item .pb-13 {
+   padding-bottom: 13px;
+}
+.footer__item .pb-10 {
+   padding-bottom: 10px;
 }
 .footer {
    min-height: 40vh;

@@ -74,10 +74,11 @@
    }
 
    &__nav {
-      @include adaptiveValue("gap", 60, 20);
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
+      gap: rem(15);
+      padding-left: rem(20);
 
       .nav__btn.btn {
          height: rem(54);
@@ -91,7 +92,7 @@
          }
       }
 
-      @media (max-width: em(1328)) {
+      @media (max-width: em(1280)) {
          display: grid;
          width: 100%;
          grid-template-rows: 1fr 1fr;
@@ -171,13 +172,20 @@
          flex-shrink: 0;
          text-wrap: nowrap;
          text-align: center;
-         @include adaptiveValue("font-size", 14, 13);
-         padding: rem(18) rem(15);
+         font-size: rem(16);
+         padding: rem(15);
          margin: rem(3) 0;
          cursor: pointer;
-         transition: all 0.5s ease-out;
+         transition: color 0.5s ease-out;
+         border-radius: rem(8);
+
+         &:hover {
+            background-color: #e8e8e8;
+            font-weight: 600;
+         }
 
          @media (max-width: $tablet) {
+            font-size: rem(14);
             padding: rem(15);
          }
       }
@@ -199,7 +207,6 @@
 
 .active-tab {
    background-color: $yellow;
-   border-radius: rem(10);
    border: 1px solid #eec200;
    font-weight: 600;
 }
@@ -241,7 +248,7 @@
    &__switch {
       display: flex;
       align-items: center;
-      gap: rem(11);
+      gap: rem(2);
       margin: rem(40) 0 0 0;
    }
 

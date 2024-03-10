@@ -2,7 +2,8 @@
    min-height: 100vh;
 }
 
-.product__slider-title {
+.main__slider-title.product__slider-title {
+   top: rem(145);
    @include adaptiveValue("font-size", 60, 40);
    height: 100%;
 }
@@ -12,6 +13,17 @@
    height: rem(589);
    justify-content: start;
    margin-top: rem(22);
+   max-width: 100%;
+
+   .main__slider-progress {
+      max-width: 923px;
+      margin-right: auto;
+      gap: rem(40);
+      margin-bottom: 17px;
+      .progress {
+         width: 100%;
+      }
+   }
 }
 
 ._icon-solar,
@@ -194,6 +206,9 @@
 }
 
 .product {
+   &__container {
+      padding: 0;
+   }
    &__services {
       &_container {
          max-width: rem(1360);
@@ -249,11 +264,13 @@
       padding: rem(66) rem(72) rem(83) rem(70);
       gap: 46px;
       width: 40%;
+      height: 575px;
       @media (max-width: rem(1150)) {
          padding: rem(28) rem(20) rem(28) rem(20);
       }
 
       @media (max-width: 768px) {
+         height: auto;
          width: 100%;
          border-radius: 0 0 25px 25px;
          padding: rem(28) rem(20) rem(28) rem(20);
@@ -280,44 +297,61 @@
          align-items: top;
          width: 100%;
          transition: all 0.3s ease;
+         h3 {
+            font-size: rem(18);
+            font-weight: 700;
+         }
+         .svgloader {
+            visibility: visible;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 3;
+         }
+         .item__animation:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #a4a4a4;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+         }
+         .item__animation:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 27.5px;
+            height: 27.5px;
+            border-radius: 50%;
+            background-color: #1c1c1c;
+            z-index: 4;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+         }
 
          &.active {
             span {
+               max-height: 6rem;
+               opacity: 100%;
                display: inline-block;
-               margin-top: 24px;
+               padding-top: 24px;
                color: #a4a4a4;
             }
-            .svgloader {
-               visibility: visible;
-               position: absolute;
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;
-               z-index: 3;
-            }
-            .item__animation:before {
-               content: "";
-               position: absolute;
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;
-               border-radius: 50%;
-               background-color: #a4a4a4;
-               z-index: 2;
-            }
+            .svgloader,
+            .item__animation:before,
             .item__animation:after {
-               content: "";
-               position: absolute;
-               top: 50%;
-               left: 50%;
-               transform: translateX(-50%) translateY(-50%);
-               width: 27.5px;
-               height: 27.5px;
-               border-radius: 50%;
-               background-color: #1c1c1c;
-               z-index: 4;
+               opacity: 1;
             }
 
             .item__animation {
@@ -328,15 +362,32 @@
 
       &_image {
          width: 60%;
+         position: relative;
+         min-height: 100%;
 
          @media (max-width: 768px) {
             width: 100%;
          }
 
+         .slide {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            opacity: 0;
+            z-index: -1;
+            transition: all 0.3s ease;
+         }
+         .slide.active {
+            opacity: 1;
+            z-index: 1;
+         }
          img {
             width: 100%;
             height: 100%;
             border-radius: 25px;
+            object-fit: cover;
 
             @media (max-width: 768px) {
                border-radius: 25px 25px 0 0;
@@ -365,6 +416,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   transition: all ease 0.5s;
 }
 
 .item__content {
@@ -373,7 +425,12 @@
    font-size: rem(15);
 
    span {
-      display: none;
+      max-height: 0rem;
+      display: inline-block;
+      opacity: 0%;
+      overflow: hidden;
+      transition: opacity 0.8s ease;
+      transition: max-height 0.45s ease;
    }
 }
 
