@@ -10,7 +10,7 @@ body {
       align-items: center;
       justify-content: flex-start;
       position: relative;
-      padding: 50px 0 0 0;
+      padding-top: 50px;
 
       @include adaptiveValue("gap", 70, 20);
 
@@ -64,7 +64,9 @@ body {
       overflow: hidden;
 
       img {
-         display: none;
+         position: absolute;
+         opacity: 0;
+         transition: 0.4s opacity ease-in-out;
          height: 100%;
          width: 100%;
          object-fit: cover;
@@ -72,7 +74,7 @@ body {
       }
 
       img.active {
-         display: block;
+         opacity: 1;
       }
    }
 
@@ -444,6 +446,7 @@ body {
       flex-direction: column;
       padding-top: rem(33);
       position: relative;
+      overflow: hidden;
       .item__title {
          max-width: 400px;
       }
@@ -556,6 +559,9 @@ body {
          p {
             @include adaptiveValue("font-size", 20, 15);
             font-weight: 600;
+         }
+         ._icon-tick {
+            background: rgba(28, 28, 28, 0.05);
          }
       }
 
@@ -913,6 +919,13 @@ body {
       ._icon-stars {
          color: #ffd51c;
       }
+      .testmonial__slide_content-diskont {
+         p {
+            em {
+               color: #ffd51c;
+            }
+         }
+      }
 
       &:nth-child(even) {
          background: #ffd51c;
@@ -924,6 +937,11 @@ body {
             border-color: #1c1c1c;
             span {
                color: #1c1c1c;
+            }
+            p {
+               em {
+                  color: white;
+               }
             }
          }
       }
@@ -988,12 +1006,14 @@ body {
          @include adaptiveValue("font-size", 16, 13);
          font-weight: 700;
          @include adaptiveValue("letter-spacing", -0.32, -0.26);
+         margin-right: 53px;
 
          span {
             color: $yellow;
          }
          @media (max-width: $tablet) {
             gap: rem(8);
+            margin-right: 0px;
          }
 
          > span:first-child {
@@ -1021,6 +1041,7 @@ body {
       &_title {
          display: flex;
          align-items: center;
+         gap: rem(8);
       }
 
       &_subtitle {
@@ -1412,4 +1433,10 @@ body {
    @media (max-width: $mobile) {
       display: inline-block;
    }
+}
+.flex {
+   display: flex;
+}
+.gap-2 {
+   gap: 2px;
 }

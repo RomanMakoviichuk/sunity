@@ -267,23 +267,6 @@ tabModes.forEach((tab) => {
 });
 
 //========================================================================================================================================================
-//open eyes - calc page
-const caclCoord = document.querySelector(".calculator");
-const eye = document.querySelector(".decor__eyes");
-
-if (eye) {
-   caclCoord.addEventListener("mouseenter", function () {
-      eye.classList.remove("eye-closed");
-      eye.classList.add("eye-opened");
-   });
-
-   caclCoord.addEventListener("mouseleave", function () {
-      eye.classList.remove("eye-opened");
-      eye.classList.add("eye-closed");
-   });
-}
-
-//========================================================================================================================================================
 //product circle loading animation
 function initProductCircleLoading() {
    let svgCircleProgressPaths = document.querySelectorAll("[id^=svgCircleProgressPath]");
