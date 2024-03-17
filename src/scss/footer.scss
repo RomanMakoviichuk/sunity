@@ -126,6 +126,11 @@
       }
    }
 }
+.footer.footer__container {
+   @media (max-width: $tablet) {
+      padding: rem(55) rem(70) rem(55) rem(35);
+   }
+}
 
 .copyright {
    h3 {

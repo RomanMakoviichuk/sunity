@@ -15,7 +15,7 @@ body {
       @include adaptiveValue("gap", 70, 20);
 
       @media (max-width: $tablet) {
-         padding-top: 75px;
+         padding-top: 0px;
          flex-direction: column;
       }
    }
@@ -175,6 +175,12 @@ body {
       }
    }
 }
+.main .main__slider-wrapper .progress span {
+   @media (max-width: $mobile) {
+      font-size: rem(12);
+      top: rem(-30);
+   }
+}
 
 .progress.active {
    animation-name: Loader;
@@ -219,7 +225,7 @@ body {
       @media (max-width: $tablet) {
          flex-direction: column;
          gap: rem(58);
-         padding: rem(80) 0;
+         padding: rem(80) 0 !important;
       }
    }
 
@@ -532,6 +538,9 @@ body {
       align-items: center;
       gap: rem(110);
       max-width: 1134px;
+      @media screen and (max-width: $mobile) {
+         padding-top: 200px;
+      }
    }
 
    &__content {
@@ -542,11 +551,15 @@ body {
          span {
             color: #ffd51c;
          }
+         .title {
+            @media screen and (max-width: $mobile) {
+               margin-bottom: 32px;
+            }
+         }
       }
 
       &_list {
          @media (max-width: $tablet) {
-            padding-right: 20px;
          }
       }
 
@@ -562,6 +575,9 @@ body {
          }
          ._icon-tick {
             background: rgba(28, 28, 28, 0.05);
+         }
+         @media screen and (max-width: $mobile) {
+            max-width: 95%;
          }
       }
 
@@ -628,7 +644,11 @@ body {
 
          @media (max-width: $tablet) {
             padding: rem(71) rem(0) 0 rem(30);
-            width: 90%;
+         }
+         p {
+            @media (max-width: $tablet) {
+               max-width: rem(268);
+            }
          }
       }
 
@@ -896,6 +916,9 @@ body {
    .parallax__item._10 {
       width: 300px;
    }
+   .parallax__item._6 {
+      width: 225px;
+   }
    .parallax__item._7 {
       width: 170px;
    }
@@ -960,6 +983,9 @@ body {
          img {
             width: 100%;
             height: 100%;
+            @media (max-width: $tablet) {
+               object-fit: cover;
+            }
          }
       }
 
@@ -1138,6 +1164,9 @@ body {
 
       p {
          width: 486px;
+         @media (max-width: $mobile) {
+            font-size: rem(13);
+         }
       }
 
       a {
@@ -1151,7 +1180,7 @@ body {
    }
 
    @media screen and (max-width: 992px) {
-      margin-bottom: 120px;
+      margin-bottom: 0px;
    }
 }
 
@@ -1302,6 +1331,10 @@ body {
       font-size: rem(17);
       font-weight: 700;
    }
+   @media (max-width: $tablet) {
+      min-height: rem(605);
+      padding-top: rem(220);
+   }
 }
 
 //========================================================================================================================================================
@@ -1314,11 +1347,6 @@ body {
       flex-direction: column;
       padding: rem(72) rem(70) rem(78) rem(70);
       max-width: rem(1440);
-
-      @media (max-width: $tablet) {
-         width: 88%;
-         padding: rem(50) rem(0) rem(78) rem(0);
-      }
    }
 
    &__header {
@@ -1418,6 +1446,12 @@ body {
    &__slide {
    }
 }
+.solution.solution__container {
+   @media (max-width: $tablet) {
+      width: 88%;
+      padding: rem(50) rem(0) rem(78) rem(0);
+   }
+}
 
 .swiper-pagination-progressbar.solution__pagination {
    position: static;
@@ -1425,13 +1459,36 @@ body {
 }
 .mob_hide {
    @media (max-width: $mobile) {
-      display: none;
+      display: none !important;
    }
 }
 .mob_show {
-   display: none;
+   display: none !important;
    @media (max-width: $mobile) {
-      display: inline-block;
+      display: inline-block !important;
+   }
+}
+.mob_show_flex {
+   display: none !important;
+   @media (max-width: $mobile) {
+      display: flex !important;
+   }
+}
+.tablet_hide {
+   @media (max-width: $tablet) {
+      display: none !important;
+   }
+}
+.tablet_show {
+   display: none !important;
+   @media (max-width: $tablet) {
+      display: inline-block !important;
+   }
+}
+.tablet_show_flex {
+   display: none !important;
+   @media (max-width: $tablet) {
+      display: flex !important;
    }
 }
 .flex {

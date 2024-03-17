@@ -167,6 +167,7 @@
          font-size: rem(15);
          font-weight: 400;
          margin-bottom: rem(30);
+         gap: rem(10);
       }
 
       &_extension {
@@ -361,7 +362,7 @@
          color: #1c1c1c;
          .footer__btn-eyes {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1) translate(0, -7px);
          }
          .purchase-footer__btn_img {
             opacity: 0;
@@ -386,10 +387,10 @@
       .footer__btn-eyes {
          position: absolute;
          opacity: 0;
-         top: 15px;
-         left: 18px;
-         transform: scale(0.8);
-         transition: transform 0.3s ease;
+         top: 22px;
+         left: 17px;
+         transform: scale(0.6);
+         transition: transform 0.45s ease;
       }
    }
 }
@@ -441,7 +442,7 @@
 }
 .header-btn {
 }
-.features__slider-wrapper.wrapper-slider.purchase__slider-wrapper {
+.purchase__sticky {
    position: sticky;
-   top: 95px;
+   top: 102px;
 }

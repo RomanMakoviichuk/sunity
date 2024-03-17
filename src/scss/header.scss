@@ -218,6 +218,10 @@ details[open] .sub-menu__list {
    display: flex;
    flex-direction: column;
    gap: 24px;
+   @media (max-width: $tablet) {
+      top: auto;
+      box-shadow: none;
+   }
 }
 
 @media (max-width: $tablet) {
