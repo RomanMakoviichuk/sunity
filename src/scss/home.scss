@@ -295,7 +295,7 @@ body {
       gap: rem(130);
       @include adaptiveValue("padding-top", 160, 136);
       padding-bottom: rem(204);
-      max-width: rem(1117);
+      max-width: rem(1164);
 
       @media (max-width: $tablet) {
          padding-bottom: rem(0);
