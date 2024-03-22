@@ -127,7 +127,7 @@
    position: relative;
 
    &__body {
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
          position: fixed;
          width: 100%;
          height: 100%;
@@ -151,7 +151,7 @@
       display: flex;
       @include adaptiveValue("gap", 50, 0);
 
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
          flex-direction: column;
          gap: rem(50) !important;
          align-items: start;
@@ -163,7 +163,7 @@
       flex-direction: row-reverse;
       gap: rem(10);
 
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
          font-size: rem(20);
       }
    }
@@ -171,7 +171,7 @@
    &__link {
       @include adaptiveValue("font-size", 16, 12);
 
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
          color: $mainColor;
          @include adaptiveValue("font-size", 35, 30);
          font-weight: 600;

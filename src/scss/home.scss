@@ -963,9 +963,12 @@ body {
             }
             p {
                em {
-                  color: white;
+                  color: #1c1c1c;
                }
             }
+         }
+         .content-author__meta_title svg {
+            color: #1c1c1c;
          }
       }
 
@@ -1068,6 +1071,10 @@ body {
          display: flex;
          align-items: center;
          gap: rem(8);
+         svg {
+            @include adaptiveValue("width", 20, 14);
+            color: rgb(255, 213, 28);
+         }
       }
 
       &_subtitle {
@@ -1091,9 +1098,11 @@ body {
 
    &__container {
       display: flex;
+      justify-content: space-between;
 
       @media (max-width: $tablet) {
          flex-direction: column;
+         justify-content: space-between;
       }
    }
 
@@ -1102,8 +1111,8 @@ body {
       flex-direction: column;
       padding-left: rem(70);
       justify-content: center;
-      max-width: rem(502);
-      margin-right: rem(102);
+      width: rem(522);
+      margin-right: rem(20);
 
       @media (max-width: $tablet) {
          padding: 0;

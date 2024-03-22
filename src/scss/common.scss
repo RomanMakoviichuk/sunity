@@ -183,46 +183,68 @@
 //========================================================================================================================================================
 // Switch
 .calc__switch {
-   #switch {
-      opacity: 0;
-      height: 0;
-      width: 0;
-      display: none;
-   }
-
-   label {
-      cursor: pointer;
-      width: rem(37);
-      height: rem(22);
-      background: rgba(120, 120, 128, 0.16);
-      display: block;
-      border-radius: rem(100);
+   .switch_label {
       position: relative;
+      display: inline-block;
+      width: 37px;
+      height: 22px;
    }
 
-   label:after {
-      content: "";
+   .switch_label input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+   }
+
+   .slider_input {
       position: absolute;
-      top: rem(2);
-      left: rem(2);
-      width: rem(18);
-      height: rem(18);
-      background: #fff;
-      border-radius: 90px;
-      transition: 0.3s;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(120, 120, 128, 0.16);
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
    }
 
-   input:checked + label {
-      background: $yellow;
+   .slider_input:before {
+      position: absolute;
+      content: "";
+      height: 17px;
+      width: 17px;
+      left: 3px;
+      bottom: 2.5px;
+      background-color: white;
+      box-shadow:
+         0px 0px 0px 1px rgba(0, 0, 0, 0.04),
+         0px 3px 8px 0px rgba(0, 0, 0, 0.15),
+         0px 3px 1px 0px rgba(0, 0, 0, 0.06);
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
    }
 
-   input:checked + label:after {
-      left: calc(100% - 2px);
-      transform: translateX(-100%);
+   input:checked + .slider_input {
+      background-color: #ffd51c;
    }
 
-   label:active:after {
-      width: rem(30);
+   input:focus + .slider_input {
+      box-shadow: 0 0 1px #ffd51c;
+   }
+
+   input:checked + .slider_input:before {
+      -webkit-transform: translateX(13.5px);
+      -ms-transform: translateX(13.5px);
+      transform: translateX(13.5px);
+   }
+
+   /* Rounded sliders */
+   .slider_input.round {
+      border-radius: 34px;
+   }
+
+   .slider_input.round:before {
+      border-radius: 50%;
    }
 }
 

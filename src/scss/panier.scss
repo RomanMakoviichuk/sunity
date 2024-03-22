@@ -1,5 +1,4 @@
 .wrapper__panier {
-   overflow: hidden;
 }
 .header {
    &_v3 {
@@ -8,12 +7,20 @@
    }
 }
 .header_v3 {
+   position: sticky;
+   top: 0;
+   z-index: 99;
    &__container {
       display: flex;
       @include adaptiveValue("gap", 392, 40);
       align-items: center;
-      justify-content: center;
+      justify-content: start;
       height: 100%;
+      max-width: rem(1280);
+      position: relative;
+      @media screen and (max-width: $mobile) {
+         justify-content: space-between;
+      }
    }
 
    &__logo {
@@ -37,6 +44,13 @@
       span {
          color: #8a8a8a;
       }
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      @media screen and (max-width: $mobile) {
+         position: static;
+         transform: translateX(0%);
+      }
    }
 }
 
@@ -44,7 +58,7 @@
 
 .orderSummary {
    position: relative;
-   min-height: 100vh;
+   min-height: 86vh;
    @media (max-width: em(920)) {
       margin-bottom: rem(250);
    }
@@ -168,6 +182,8 @@
 }
 
 .orderTotal {
+   position: relative;
+   min-height: 100%;
    &__wrapper {
       padding: rem(30) rem(32) rem(31) rem(39);
       background: #fff;
@@ -176,6 +192,10 @@
       flex-direction: column;
       justify-content: flex-start;
       max-width: rem(347);
+   }
+   &__main {
+      position: sticky;
+      top: 110px;
    }
 
    &__title {
@@ -196,6 +216,7 @@
    &__button {
       display: flex;
       flex-direction: row;
+      align-items: center;
       gap: rem(15);
       justify-content: center;
       font-size: rem(15);
@@ -255,6 +276,10 @@
 }
 
 .panier {
+   &__page {
+      position: relative;
+      height: 100%;
+   }
    &__decor {
       bottom: rem(-350);
       right: rem(200);
